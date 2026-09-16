@@ -29,11 +29,37 @@
     dot.addEventListener("click", function () { show(idx); play(); });
   });
 
+  var nav = document.querySelector(".nav");
+  var menuBtn = document.querySelector(".menu-btn");
+  var scrim = document.querySelector(".nav-scrim");
+  function closeMenu() {
+    if (!nav || !menuBtn) return;
+    nav.classList.remove("is-open");
+    menuBtn.classList.remove("is-open");
+    menuBtn.setAttribute("aria-expanded", "false");
+    if (scrim) scrim.classList.remove("is-on");
+    document.body.classList.remove("nav-open");
+  }
+  function openMenu() {
+    nav.classList.add("is-open");
+    menuBtn.classList.add("is-open");
+    menuBtn.setAttribute("aria-expanded", "true");
+    if (scrim) scrim.classList.add("is-on");
+    document.body.classList.add("nav-open");
+  }
+  if (menuBtn && nav) {
+    menuBtn.addEventListener("click", function () {
+      if (nav.classList.contains("is-open")) closeMenu();
+      else openMenu();
+    });
+  }
+  if (scrim) scrim.addEventListener("click", closeMenu);
   var navLinks = document.querySelectorAll(".nav a");
   navLinks.forEach(function (link) {
     link.addEventListener("click", function () {
       navLinks.forEach(function (a) { a.classList.remove("on"); });
       link.classList.add("on");
+      closeMenu();
     });
   });
 
