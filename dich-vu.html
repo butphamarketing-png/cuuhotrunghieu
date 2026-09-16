@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet" />
   <link rel="icon" href="images/logo.jpg" type="image/jpeg" />
-  <link rel="stylesheet" href="styles.css?v=subpages" />
+  <link rel="stylesheet" href="styles.css?v=mobui" />
 </head>
 <body>
   <a class="skip" href="#noi-dung">Bỏ qua menu</a>
@@ -26,7 +26,7 @@
   </div>
   <div class="nav-scrim" aria-hidden="true"></div>
   <header class="site-header">
-    <a class="brand" href="index.html"><img class="logo" src="images/logo.jpg" width="72" height="72" alt="Cứu hộ Trung Hiếu 24/7" /></a>
+    <a class="brand" href="index.html"><img class="logo" src="images/logo.jpg" width="72" height="72" alt="Cứu hộ Trung Hiếu 24/7" /><span class="brand-name">TRUNG HIẾU<br />CỨU HỘ 24/7</span></a>
     <button class="menu-btn" type="button" aria-label="Mở menu" aria-expanded="false" aria-controls="menu-chinh"><span></span><span></span><span></span></button>
     <nav class="nav" id="menu-chinh" aria-label="Chính">
       <a href="index.html">Trang chủ</a>
@@ -42,20 +42,68 @@
   <main id="noi-dung" class="page-main">
     <header class="page-hero">
       <p class="crumb"><a href="index.html">Trang chủ</a> / Dịch vụ</p>
-      <h1>Dịch vụ cứu hộ</h1>
-      <p>Kéo xe, thay lốp, câu bình, giao xăng – có mặt 24/7 tại phường An Lộc và các phường lân cận.</p>
-    </header>
-    <section class="svc-wrap">
-      <div class="svc">
-        <a class="svc-card" href="tel:0966316671"><img src="images/svc-keo.png" alt="" /><h3>Kéo xe – chở xe</h3><p>Vận chuyển xe an toàn đến gara, nhà hoặc điểm bạn chỉ định.</p><span class="go">→</span></a>
-        <a class="svc-card" href="tel:0966316671"><img src="images/svc-lop.png" alt="" /><h3>Thay lốp tận nơi</h3><p>Hỗ trợ thay lốp nhanh, đúng kỹ thuật ngay tại chỗ.</p><span class="go">→</span></a>
-        <a class="svc-card" href="tel:0966316671"><img src="images/svc-binh.png" alt="" /><h3>Câu bình ắc quy</h3><p>Khởi động xe an toàn khi hết bình, không lo chết máy giữa đường.</p><span class="go">→</span></a>
-        <a class="svc-card" href="tel:0966316671"><img src="images/svc-xang.png" alt="" /><h3>Giao xăng tận nơi</h3><p>Giao xăng nhanh khi hết nhiên liệu, cả đêm lẫn ngày lễ.</p><span class="go">→</span></a>
+      <h1>Dịch vụ cứu hộ 24/7</h1>
+      <p>Kéo xe, thay lốp, câu bình, giao xăng tận nơi tại phường An Lộc và các phường lân cận. Báo giá trước khi xuất phát.</p>
+      <div class="hero-actions">
+        <a class="btn btn-call" href="tel:0966316671">Gọi 0966 316 671</a>
+        <a class="btn btn-zalo" href="https://zalo.me/0966316671" target="_blank" rel="noopener">Nhắn Zalo</a>
       </div>
-    </section>
+    </header>
+    <article class="svc-detail" id="keo-xe">
+      <img src="images/svc-keo.png" alt="Kéo xe ô tô" />
+      <div>
+        <h2>Kéo xe – chở xe</h2>
+        <p>Xe chết máy, tai nạn nhỏ, nằm đường hay cần đưa về gara — Trung Hiếu kéo an toàn, cố định đúng cách, không cào gầm.</p>
+        <ul>
+          <li>Nhận xe máy, ô tô, xe bán tải</li>
+          <li>Kéo về nhà, gara quen hoặc điểm bạn chỉ định</li>
+          <li>Báo giá theo loại xe và số km trước khi đi</li>
+        </ul>
+        <a class="btn btn-call" href="tel:0966316671">Gọi kéo xe</a>
+      </div>
+    </article>
+    <article class="svc-detail" id="thay-lop">
+      <img src="images/svc-lop.png" alt="Thay lốp tận nơi" />
+      <div>
+        <h2>Thay lốp tận nơi</h2>
+        <p>Nổ lốp giữa đường, không có lốp dự phòng hoặc không tự thay được — gọi Trung Hiếu đến thay tại chỗ.</p>
+        <ul>
+          <li>Thay lốp xe máy / ô tô tùy tình trạng</li>
+          <li>Nếu không thay được tại chỗ sẽ kéo về gara</li>
+          <li>Ưu tiên đoạn đường an toàn, có đèn cảnh báo</li>
+        </ul>
+        <a class="btn btn-call" href="tel:0966316671">Gọi thay lốp</a>
+      </div>
+    </article>
+    <article class="svc-detail" id="cau-binh">
+      <img src="images/svc-binh.png" alt="Câu bình ắc quy" />
+      <div>
+        <h2>Câu bình ắc quy</h2>
+        <p>Xe đề không nổ, đèn mờ, bình yếu — câu bình đúng cực, không làm hỏng điện. Nếu bình hỏng sẽ tư vấn kéo về gara.</p>
+        <ul>
+          <li>Câu bình tại chỗ khi còn cứu được</li>
+          <li>Không đề máy nhiều lần trước khi đội cứu hộ tới</li>
+          <li>Báo tình trạng: đèn taplo, tiếng đề, loại xe</li>
+        </ul>
+        <a class="btn btn-call" href="tel:0966316671">Gọi câu bình</a>
+      </div>
+    </article>
+    <article class="svc-detail" id="giao-xang">
+      <img src="images/svc-xang.png" alt="Giao xăng tận nơi" />
+      <div>
+        <h2>Giao xăng tận nơi</h2>
+        <p>Hết xăng giữa đường, đêm muộn hay khu vực ít cây xăng — giao đúng loại nhiên liệu, hỗ trợ nổ máy an toàn.</p>
+        <ul>
+          <li>Gọi/Zalo gửi vị trí + loại xe (xăng / dầu)</li>
+          <li>Làm việc 24/7, kể cả lễ Tết</li>
+          <li>Nếu xe không nổ sau khi đổ sẽ kiểm tra thêm</li>
+        </ul>
+        <a class="btn btn-call" href="tel:0966316671">Gọi giao xăng</a>
+      </div>
+    </article>
     <section class="issues-wrap">
       <div class="head center">
-        <h2>Khi nào nên gọi Trung Hiếu?</h2>
+        <h2>Bạn đang gặp sự cố gì?</h2>
         <p>Chỉ cần một cuộc gọi, chúng tôi có mặt để hỗ trợ.</p>
       </div>
       <div class="issues">
@@ -73,6 +121,7 @@
       <div class="head center">
         <p class="kicker">Quy trình</p>
         <h2>Chỉ 4 bước – Có mặt nhanh chóng</h2>
+        <p>Đơn giản, rõ ràng, tiết kiệm thời gian cho bạn.</p>
       </div>
       <div class="road is-in">
         <ol>
@@ -83,7 +132,6 @@
         </ol>
       </div>
     </section>
-    <p class="more-row"><a class="chip-btn" href="lien-he.html">Đặt lịch hoặc gọi ngay →</a></p>
   </main>
   <footer class="foot">
     <div class="foot-grid">
@@ -116,7 +164,7 @@
     <a class="sf-call" href="tel:0966316671" title="Hotline"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .58 3.6 1 1 0 0 1-.25 1Z"/></svg><span>Hotline</span></a>
   </nav>
   <a class="totop" href="#noi-dung" aria-label="Lên đầu trang">↑</a>
-  <script src="script.js?v=subpages"></script>
+  <script src="script.js?v=mobui"></script>
   <div class="dock"><a href="tel:0966316671">Gọi điện</a><a class="zalo" href="https://zalo.me/0966316671" target="_blank" rel="noopener">Zalo</a></div>
 </body>
 </html>
