@@ -1,0 +1,157 @@
+# PROMPT DÁN CHATGPT (copy từ dòng “BẮT ĐẦU PROMPT” trở xuống)
+
+BẮT ĐẦU PROMPT
+
+Bạn là designer UI/UX chuyên landing page dịch vụ khẩn cấp tại Việt Nam. Nhiệm vụ: thiết kế giao diện TRANG CHỦ website cho dịch vụ cứu hộ xe tên “Cứu hộ Trung Hiếu”.
+
+Mục tiêu trang: người đang kẹt xe (đêm, mưa, cao tốc, hết xăng, chết máy) nhìn 3 giây là thấy số điện thoại và bấm gọi. Không làm portfolio. Không làm blog. Không làm website công ty lớn.
+
+## 1) Bạn phải làm gì
+Xuất 2 mockup sắc nét như website đã lên production:
+1. Desktop 16:9 — full trang chủ (có thể 1 ảnh dài hoặc 2 ảnh: above-the-fold + phần dưới)
+2. Mobile 9:16 — cùng nội dung, có thanh gọi cố định dưới cùng
+
+Chữ trên mockup phải là tiếng Việt thật, đúng chính tả. Cấm lorem ipsum. Cấm watermark. Cấm logo/SĐT/ảnh của đối thủ.
+
+## 2) Đây là ai (bắt buộc đúng 100%)
+- Thương hiệu: Cứu hộ Trung Hiếu
+- Chủ hộ: Nguyễn Trung Hiếu
+- Hotline: 0966 316 671 (viết trên web: 0966 316 671)
+- Zalo: 0966 316 671 (link kiểu zalo.me/0966316671)
+- Địa chỉ: Tổ 5, Khu phố Phú Thuận, An Lộc, Đồng Nai
+- Phục vụ: xe máy, xe tay ga, ô tô 4–7 chỗ
+- Giọng văn: gần gũi, nói thẳng, báo giá trước, không đội giá, không ép kéo xe
+
+Nếu thiếu ảnh đội xe thật: dùng ảnh stock xe sàn trượt / xe kéo cứu hộ Việt Nam (xe tải vàng hoặc trắng, sàn chở ô tô). CẤM dùng xe cứu thương bệnh viện, xe police, xe cứu hỏa.
+
+## 3) Học layout các trang cứu hộ Việt Nam — CHỈ HỌC CÁCH BỐ CỤC, KHÔNG COPY
+Các trang đối thủ hay làm:
+- Header luôn có số điện thoại
+- Hero = ảnh xe cứu hộ/sàn thật + nút gọi đỏ to
+- Có mục “khi nào cần gọi”
+- Có quy trình 4 bước
+- Có FAQ: gọi cần nói gì, có báo giá trước không, có làm đêm không
+- Có gallery xe thật
+- CTA “Gọi ngay” lặp lại nhiều lần
+- Mobile: 2 nút Gọi / Zalo dính đáy màn hình
+
+Trang Trung Hiếu phải sạch, hiện đại, khoảng thở rộng (không nhồi chữ, không slider lung tung, không popup).
+
+## 4) Màu sắc (bắt buộc dùng bộ này)
+- Nền: #070b14
+- Panel/card: #111827
+- Chữ chính: #f4f1ea
+- Chữ phụ: #b7c0ce
+- Vàng nhấn: #ffb703
+- Nút gọi khẩn cấp: #e11d2e
+- Nút Zalo: viền vàng trên desktop; trên mobile nút Zalo nền #0068ff
+- Font: Be Vietnam Pro, heading rất lớn, đậm, letter-spacing hơi âm
+- Bo góc: 16–24px
+- Logo: hình vuông bo góc vàng, icon xe kéo/sàn màu navy
+
+## 5) Cấu trúc trang chủ — làm ĐỦ các block theo thứ tự này
+
+### A. Header dính
+Trái: logo + “Cứu hộ Trung Hiếu” + dòng nhỏ vàng “CÓ MẶT 24/7”
+Giữa: Dịch vụ | Khi nào gọi | Khu vực | Bảng giá | Liên hệ
+Phải: nút đỏ “0966 316 671”
+
+### B. Hero (full-bleed, ảnh xe sàn/kéo)
+Nhãn nhỏ vàng: ĐỒNG NAI · XE MÁY & Ô TÔ
+H1: Cứu hộ xe nhanh.
+Có mặt khi bạn cần.
+Mô tả: Hết xăng, nổ lốp, chết máy, tai nạn nhỏ hay cần kéo xe — Trung Hiếu nhận cuộc gọi và xuất phát ngay, cả đêm lẫn ngày lễ.
+Nút 1 đỏ: Gọi cứu hộ ngay
+Nút 2 viền vàng: Nhắn Zalo
+3 ý nhỏ: Có mặt nhanh trong khu vực · Báo giá trước khi làm · Hỗ trợ 24/7
+Card phụ (góc phải hoặc dưới): HOTLINE CỨU HỘ / 0966 316 671 / Chủ hộ: Nguyễn Trung Hiếu / An Lộc, Đồng Nai
+
+### C. Khi nào cần gọi (6 ô)
+1. Xe chết máy / không đề được
+2. Nổ lốp, hết xăng, kích bình
+3. Tai nạn, xe nằm lề đường
+4. Ngập nước, tắt máy
+5. Xe không tự chạy được
+6. Cần kéo về nhà / gara
+
+### D. 4 cam kết
+Có mặt nhanh · Báo giá trước · Sửa được thì sửa, không ép kéo · Trực 24/7 kể cả lễ
+
+### E. Dịch vụ (6 card, mỗi card 1 tiêu đề + 1 câu)
+1. Kéo xe – chở xe: Đưa xe về nhà, gara hoặc điểm sửa khi xe không nổ máy.
+2. Cứu hộ tại chỗ: Nổ lốp, hết xăng, kích bình ắc quy, kẹt khóa.
+3. Xe chết máy / không đề: Kiểm tra tại hiện trường; không chạy được thì kéo về gara.
+4. Tai nạn, lề đường: Đưa xe khỏi lòng đường, ưu tiên an toàn người trên xe.
+5. Cứu hộ đêm – ngày lễ: Trực 24/7, cuối tuần và Tết vẫn nhận.
+6. Tư vấn trước khi đi: Gọi mô tả tình trạng. Tự xử được thì nói thật, không ép kéo.
+
+### F. Quy trình 4 bước (đánh số 01–04)
+01 Gọi điện hoặc nhắn Zalo 0966 316 671
+02 Gửi vị trí (Google Maps / Zalo) + loại xe + tình trạng
+03 Trung Hiếu báo giá và thời gian đến
+04 Xuất phát — xử lý tại chỗ hoặc kéo xe
+
+### G. Khu vực
+Chữ: Trụ tại An Lộc, Đồng Nai — nhận cứu hộ, kéo xe các xã/phường lân cận và tuyến về TP. Hồ Chí Minh.
+Tag: An Lộc · Đồng Nai · Quốc lộ · Cao tốc gần · Hướng TP.HCM
+Địa chỉ nhỏ: Tổ 5, Khu phố Phú Thuận, An Lộc, Đồng Nai
+
+### H. Tham khảo chi phí
+Tiêu đề: Báo giá trước khi xuất phát
+Không bịa số tiền cụ thể. Chỉ 3 dòng:
+- Giá tùy loại xe, số km và tình trạng (kéo / xử lý tại chỗ)
+- Nói rõ phí trước khi điều xe
+- Đêm muộn, mưa, cao tốc có thể phụ thu — sẽ báo trước
+Nút: Gọi 0966 316 671 để báo giá
+
+### I. Vì sao gọi Trung Hiếu
+Checklist:
+- Xuất phát sau khi chốt vị trí
+- Giá kéo/cứu hộ nói trước, không đội giá dọc đường
+- Làm cẩn thận, hạn chế xước xe
+- Nhận xe máy và ô tô gia đình
+3 số lớn: 24/7 · 15–40 phút* · 1 cuộc gọi
+Ghi chú nhỏ: *Tùy khoảng cách và giao thông tại Đồng Nai.
+
+### J. Hình ảnh thực tế
+4–6 khung ảnh xe sàn / kéo / hiện trường (placeholder nếu chưa có ảnh khách). Caption ngắn tiếng Việt.
+
+### K. FAQ (4 câu, có sẵn câu trả lời trên mockup)
+1. Gọi cứu hộ cần nói gì?
+→ Vị trí (link Maps hoặc gửi Zalo), loại xe (xe máy / ô tô), tình trạng (chết máy, nổ lốp, tai nạn…), muốn kéo về đâu.
+2. Có báo giá trước không?
+→ Có. Báo giá trước khi xuất phát. Không đội giá dọc đường.
+3. Có làm đêm, cuối tuần, lễ Tết không?
+→ Có. Trực 24/7.
+4. Kéo về nhà hoặc gara được không?
+→ Được. Kéo về nhà, gara quen, hoặc điểm bạn chỉ định.
+
+### L. CTA cuối
+Tiêu đề: Cần cứu hộ — gọi hoặc nhắn ngay
+Phụ: Nói loại xe, tình trạng, vị trí. Mình báo thời gian đến và giá trước khi đi.
+Nút: Gọi 0966 316 671 | Chat Zalo
+
+### M. Footer
+Cứu hộ Trung Hiếu — Nguyễn Trung Hiếu
+Hotline: 0966 316 671 · An Lộc, Đồng Nai
+© 2026 Cứu hộ Trung Hiếu
+
+### N. Mobile
+Ẩn menu chữ. Hiện logo + nút gọi. Đáy màn hình 2 nút full width: Gọi điện (đỏ) | Zalo (xanh).
+
+## 6) Những thứ CẤM
+- Copy giao diện/logo/SĐT/ảnh: VETC, Cứu hộ 702, Cứu Hộ Giao Thông VN, Hoàng Long, Cứu hộ 119
+- Xe cứu thương, chữ English (trừ chữ Zalo)
+- Slider 5 ảnh, popup, giỏ hàng, form đăng ký dài
+- Bịa giá tiền cụ thể (vd 500.000đ) vì khách chưa chốt bảng giá
+- Nhồi quá nhiều bài tin tức
+
+## 7) Cách trả lời
+Bước 1: Tóm tắt 5 dòng bạn đã hiểu brief (thương hiệu, SĐT, style, 3 block quan trọng nhất).
+Bước 2: Xuất mockup desktop.
+Bước 3: Xuất mockup mobile.
+Bước 4: Liệt kê checklist đã làm đủ các block A–N.
+
+Nếu tool của bạn chỉ vẽ được 1 ảnh: ưu tiên desktop above-the-fold (header + hero + nút gọi) thật đẹp, rồi ảnh 2 là phần dịch vụ + quy trình + CTA.
+
+KẾT THÚC PROMPT

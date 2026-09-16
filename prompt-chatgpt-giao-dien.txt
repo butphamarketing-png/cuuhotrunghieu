@@ -1,0 +1,106 @@
+PROMPT CHATGPT — Giao diện trang chủ Cứu hộ Trung Hiếu
+Cập nhật sau khi xem thêm: cuuhogiaothongvn.com, cuuhooto.com.vn, cuuhootosaigon.vn, cuuho119.vn, kichbinhoto.com
+(+ lần trước: cuuhodongnai.net, cuuhodongnai.vn, vetc.com.vn/cuu-ho)
+
+Bạn là UI/UX designer. Tạo mockup trang chủ website cứu hộ xe Việt Nam, sắc nét như production. Xuất desktop 16:9 + mobile 9:16. Chữ tiếng Việt thật, không lorem ipsum, không watermark, không copy logo/số điện thoại của đối thủ.
+
+========================
+THAM KHẢO (HỌC LAYOUT, KHÔNG COPY)
+========================
+1) Cứu hộ địa phương Đồng Nai (cuuhodongnai.net):
+- Header: logo xe cứu hộ tròn + tên to + HOTLINE/ZALO luôn hiện
+- Hero: ảnh XE THẬT (xe sàn, xe cẩu) phủ nền + headline lớn + số điện thoại nổi
+- 4 cột cam kết: Nhanh chóng / Chuyên nghiệp / Giá hợp lý / Hỗ trợ 24/7
+- Liệt kê tuyến: QL51, cao tốc Long Thành – Dầu Giây, Long Khánh, Trảng Bom
+- Nút nổi góc: Gọi / Zalo / Chỉ đường
+
+2) Cứu hộ Đồng Nai (cuuhodongnai.vn):
+- Ảnh thực tế đội xe (gallery)
+- Khu vực: Long Thành, Nhơn Trạch, QL51, cao tốc
+- CTA lặp lại nhiều lần: “Gọi xe cứu hộ ngay”
+
+3) VETC Cứu hộ (vetc.com.vn/cuu-ho) — hiện đại hơn:
+- Header gọn, nút “Gọi cứu hộ ngay” nổi bật
+- Hero trắng sạch + checklist 3 ý + ảnh xe cứu hộ chuyên nghiệp
+- Bảng giá minh bạch (km / loại xe)
+- Card dịch vụ: kích bình, vá lốp, cẩu kéo, tai nạn
+- FAQ: cần nói gì khi gọi, có báo giá trước không, kéo về đâu
+
+4) Cứu Hộ Giao Thông VN (cuuhogiaothongvn.com) — mẫu landing mạnh nhất miền Nam:
+- Hero full-bleed: ảnh xe sàn vàng + xe khách thật + tiêu đề vàng + nút đỏ “GỌI NGAY + SĐT”
+- Menu: Trang chủ / Dịch vụ / Khu vực / Bảng giá / FAQ
+- Block “Khi nào cần gọi”: chết máy, ngập nước, tai nạn, không tự chạy, quốc lộ/cao tốc, kéo về gara
+- 6 card dịch vụ có ảnh
+- Khu vực tách tỉnh (Đồng Nai: Biên Hòa, Long Thành, Trảng Bom, QL51…)
+- Quy trình 4 bước: Gọi/Zalo → gửi vị trí → báo giá → điều xe
+- Bảng giá + lưu ý phụ thu đêm
+- Gallery thực tế + review khách + FAQ accordion
+- Lặp CTA “Gọi ngay” nhiều lần
+
+5) Hoàng Long HCM (cuuhooto.com.vn):
+- Thanh top: Contact 24h + SĐT
+- H1 gắn luôn số điện thoại
+- Ảnh xe cứu hộ thật ngay dưới fold
+- Thông điệp vàng: “sửa được thì sửa, không ép kéo xe”
+- Liệt kê khu vực rất cụ thể
+
+6) Cứu hộ 119 Đà Nẵng (cuuho119.vn):
+- Hero tối + chữ lớn + tổng đài 24/7
+- Counter: năm KN / khách / nhân viên
+- Testimonial khách
+- Dịch vụ dạng icon lớn
+
+Cứu hộ Trung Hiếu = hộ An Lộc, gần gũi. GIAO DIỆN lấy: hero ảnh xe sàn + nút gọi đỏ (Giao Thông VN), layout sạch (VETC), cam kết “không ép kéo” (Hoàng Long), FAQ + quy trình 4 bước. Không làm site tin tức lề làng, không form 8 tiếng chờ.
+
+========================
+THÔNG TIN THƯƠNG HIỆU (BẮT BUỘC ĐÚNG)
+========================
+- Tên: Cứu hộ Trung Hiếu
+- Chủ: Nguyễn Trung Hiếu
+- Hotline/Zalo: 0966 316 671
+- Địa chỉ: Tổ 5, Khu phố Phú Thuận, An Lộc, Đồng Nai
+- Phục vụ: xe máy, xe tay ga, ô tô 4–7 chỗ
+- Dịch vụ: kéo xe/chở xe; cứu hộ tại chỗ (nổ lốp, hết xăng, kích bình, kẹt khóa); chết máy; tai nạn/lề đường; đêm–lễ; tư vấn trước khi đi
+- Khu vực: An Lộc, Đồng Nai, tuyến gần HCM, QL / đường liên xã (có thể ghi thêm: hướng Long Thành, Trảng Bom, cao tốc nếu phù hợp khu vực)
+- Giọng: gần gũi, ra quyết định 3 giây, báo giá trước, không đội giá
+
+========================
+MÀU & STYLE
+========================
+Hai hướng (chọn 1, ưu tiên A):
+A. Tối – khẩn cấp cao cấp: nền #070b14, vàng #ffb703, đỏ nút gọi #e11d2e, chữ trắng.
+B. Sáng – tin cậy (học VETC): nền trắng, xanh/vàng cam, nút gọi cam đậm, ảnh xe rõ.
+
+Font: Be Vietnam Pro / Inter. Heading rất lớn. Bo góc 16–24px. Logo: icon xe kéo trên nền vàng.
+
+========================
+BỐ CỤC TRANG CHỦ
+========================
+1. Header dính: logo + tên + “24/7” | menu | nút đỏ/cam số 0966 316 671
+2. Hero full ảnh xe sàn/kéo thật: headline + 3 ý + Gọi / Zalo. Không dùng xe cứu thương bệnh viện
+3. “Khi nào cần gọi”: 6 tình huống (chết máy, nổ lốp/hết xăng, tai nạn, ngập nước, không tự chạy, cần kéo về nhà/gara)
+4. 4 cam kết: Có mặt nhanh · Báo giá trước · Sửa được thì sửa, không ép kéo · Trực 24/7
+5. Dịch vụ 6 card
+6. Quy trình 4 bước: Gọi/Zalo → gửi vị trí + loại xe → báo giá → xuất phát
+7. Khu vực tag: An Lộc · Đồng Nai · QL · cao tốc gần · hướng HCM
+8. Bảng “tham khảo chi phí” — chỉ ghi “báo giá khi gọi, tùy km và loại xe” (không bịa số)
+9. Gallery 4–6 ảnh đội xe
+10. FAQ accordion (gọi cần nói gì / báo giá trước / đêm lễ / kéo về đâu)
+11. CTA cuối + footer
+12. Mobile: thanh đáy Gọi | Zalo
+13. (Tuỳ chọn) 2–3 review khách giả định ngắn, ghi rõ là mẫu nếu chưa có review thật
+
+========================
+COPY HERO
+========================
+Nhãn: ĐỒNG NAI · XE MÁY & Ô TÔ
+H1: Cứu hộ xe nhanh. Có mặt khi bạn cần.
+Mô tả: Hết xăng, nổ lốp, chết máy, tai nạn nhỏ hay cần kéo xe — Trung Hiếu nhận cuộc gọi và xuất phát ngay, cả đêm lẫn ngày lễ.
+Nút: Gọi cứu hộ ngay | Nhắn Zalo
+
+========================
+CẤM
+========================
+Không copy logo/SĐT/ảnh của VETC, 702, Giao Thông VN, Hoàng Long, 119. Không tiếng Anh (trừ Zalo). Không slider lung tung. Không form “chờ 8 tiếng”. Số 0966 316 671 phải đọc được từ 3 giây. Ưu tiên chuyển đổi.
+
+Tạo mockup desktop + mobile, UI production, khoảng thở rộng, typography mạnh.
