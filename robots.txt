@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /adminbp
+Disallow: /admin.html
+Disallow: /admin.js
+Disallow: /admin.css
+Disallow: /wrap-hand-seo.js
+
+Sitemap: https://cuuhotrunghieu.com/sitemap.xml

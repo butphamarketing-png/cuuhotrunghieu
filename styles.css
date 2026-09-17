@@ -241,6 +241,10 @@ body.nav-open { overflow: hidden; }
 }
 .article-list h2 { margin: 0 0 8px; color: var(--navy); font-size: 20px; }
 .article-list time { display: block; color: var(--muted); font-size: 13px; margin-bottom: 10px; }
+.seo-post p { margin: 0 0 12px; line-height: 1.65; }
+.seo-related, .kw-list { padding-left: 18px; }
+.seo-related li, .kw-list li { margin: 6px 0; }
+.kw-list a, .seo-related a { color: var(--blue); font-weight: 700; text-decoration: none; }
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;

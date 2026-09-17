@@ -121,6 +121,19 @@
         "Địa điểm / ghi chú: " + data.get("note")
       ];
       var text = lines.join("\n");
+      try {
+        var box = JSON.parse(localStorage.getItem("cuuho-inbox") || "[]");
+        box.unshift({
+          at: new Date().toLocaleString("vi-VN"),
+          name: String(data.get("name") || ""),
+          phone: String(data.get("phone") || ""),
+          vehicle: String(data.get("vehicle") || ""),
+          when: when,
+          note: String(data.get("note") || ""),
+          read: false
+        });
+        localStorage.setItem("cuuho-inbox", JSON.stringify(box.slice(0, 80)));
+      } catch (err) {}
       var status = document.getElementById("book-status");
       function done(ok) {
         if (!status) return;
@@ -134,7 +147,12 @@
       } else {
         done(false);
       }
-      window.open("https://zalo.me/0343387868", "_blank", "noopener");
+      var zalo = "https://zalo.me/0343387868";
+      try {
+        var cms = JSON.parse(localStorage.getItem("cuuho-cms") || "null");
+        if (cms && cms.zalo) zalo = cms.zalo;
+      } catch (err2) {}
+      window.open(zalo, "_blank", "noopener");
     });
   }
 })();
