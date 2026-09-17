@@ -79,6 +79,15 @@
 
   if (slides.length) play();
 
+  var header = document.querySelector(".site-header");
+  if (header) {
+    var onScroll = function () {
+      header.classList.toggle("is-scrolled", window.scrollY > 12);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+  }
+
   var road = document.querySelector(".road");
   var process = document.querySelector(".process");
   if (road) {
@@ -125,7 +134,7 @@
       } else {
         done(false);
       }
-      window.open("https://zalo.me/0966316671", "_blank", "noopener");
+      window.open("https://zalo.me/0343387868", "_blank", "noopener");
     });
   }
 })();
