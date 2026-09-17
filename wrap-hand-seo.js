@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const BASE = "https://cuuhotrunghieu.com";
+const BASE = "https://www.cuuhotrunghieu.com";
 const OGIMG = BASE + "/images/hero-slide-1.png";
 const MAPS = "https://maps.app.goo.gl/oDM8HWbHmq7ijzN36";
 
@@ -276,6 +276,41 @@ ${faq([
 });
 
 pages.push({
+  file: "cuu-ho-binh-phuoc.html",
+  title: "Cứu hộ Bình Phước 24/7 | Kéo xe, cứu hộ xe máy & ô tô | Trung Hiếu",
+  desc: "Cứu hộ Bình Phước 24/7 từ An Lộc: kéo xe, cứu hộ xe máy & ô tô, thay lốp, câu bình, giao xăng tại phường Bình Phước và lân cận. Gọi 0343 387 868, báo giá trước.",
+  crumb: "Cứu hộ Bình Phước",
+  h1: "Cứu hộ Bình Phước – gọi được thì nói vị trí, rồi mới điều xe",
+  lead: "Người tìm cứu hộ Bình Phước đang kẹt xe, không cần bài địa lý. Trung Hiếu xuất phát Tổ 5 Phú Thuận, An Lộc; nhận ca phường Bình Phước và các phường sát An Lộc, báo giá theo km trước khi đi.",
+  jsonld: biz("Bình Phước"),
+  related: `<li><a href="cuu-ho-24-7-binh-phuoc.html">Phường Bình Phước khác tỉnh cũ thế nào</a></li><li><a href="cuu-ho-an-loc.html">Cứu hộ An Lộc</a></li><li><a href="keo-xe-an-loc.html">Kéo xe An Lộc</a></li>`,
+  body: `
+<p>Từ khóa <strong>cứu hộ Bình Phước</strong> gõ nhiều vì thói quen gọi vùng. Trung Hiếu không mở chi nhánh ảo “cả tỉnh”. Xe cứu hộ đóng tại An Lộc. Ca cứu hộ Bình Phước trên site này nghĩa là: xe nằm ở phường Bình Phước (lân cận An Lộc) hoặc điểm gửi Maps còn trong tầm chạy từ Phú Thuận.</p>
+<p>Ngoài tầm thì nói không lúc gọi — không nhận ca rồi bỏ dở giữa đường.</p>
+<h2>Cứu hộ Bình Phước làm được những việc gì</h2>
+<ul>
+<li>Kéo xe máy, ô tô về nhà hoặc gara bạn chỉ.</li>
+<li>Thay lốp tận nơi nếu có chỗ đứng an toàn; không thì kéo vào lề rồi xử lý.</li>
+<li>Câu bình ắc quy khi đề không nổ, đèn mờ.</li>
+<li>Giao xăng / dầu — phải nói đúng loại nhiên liệu.</li>
+<li>Ca đêm, lễ, Tết: cùng số <a href="tel:0343387868">0343 387 868</a>.</li>
+</ul>
+<p>Quy trình giống An Lộc: bốn ý khi gọi — vị trí (link Maps), xe máy hay ô tô, xe đang làm gì, muốn kéo về đâu.</p>
+<h2>Vì sao ca Bình Phước tính km từ An Lộc</h2>
+<p>Trụ sở: Tổ 5, Khu phố Phú Thuận, An Lộc, Đồng Nai. Không có đội “sẵn tại Bình Phước” trên giấy. Thời gian và giá phụ thuộc đoạn đường thực tế, kẹt xe, mưa. Trung Hiếu nói số tiền và giờ dự kiến trước khi xe lăn bánh, không đội giá dọc đường.</p>
+<h2>Gọi cứu hộ Bình Phước lúc nào</h2>
+<p>Xe chắn làn, nổ lốp đêm, hết bình cổng khu, hết xăng hẻm, ngập nước — đừng đề lại nếu vừa ngập. Tấp lề được thì tấp. Người trên xe xuống phía lề, không đứng sau thùng.</p>
+<h2>Phường Bình Phước và ‘Bình Phước’ trên Google</h2>
+<p>Search hay gộp tên phường với tên gọi vùng cũ. Trang này nhắm người cần xe cứu hộ ngay. Chi tiết ranh giới phường nằm ở bài <a href="cuu-ho-24-7-binh-phuoc.html">cứu hộ phường Bình Phước</a>. Danh sách phường Trung Hiếu nhận: An Lộc, Bình Long, Chơn Thành, Minh Hưng, Đồng Xoài, phường Bình Phước — xem <a href="../khu-vuc.html">khu vực</a>.</p>
+${faq([
+  ["Cứu hộ Bình Phước có 24/7 không?", "Có, trong vùng phục vụ. Gọi 0343 387 868, kể cả đêm."],
+  ["Tôi ở xa An Lộc, còn nhận không?", "Gửi Maps. Trong danh sách phường lân cận thì nhận. Ngoài thì nói thẳng."],
+  ["Giá cứu hộ Bình Phước bao nhiêu?", "Không niêm một giá cho mọi ca. Báo theo loại xe và km từ An Lộc, trước khi xuất phát."]
+])}
+<p>Maps trụ sở: <a href="https://maps.app.goo.gl/oDM8HWbHmq7ijzN36" target="_blank" rel="noopener">mở Google Maps</a>. Zalo: <a href="https://zalo.me/0343387868" target="_blank" rel="noopener">0343387868</a>.</p>`
+});
+
+pages.push({
   file: "cuu-ho-24-7-binh-phuoc.html",
   title: "Cứu hộ phường Bình Phước | Trung Hiếu 24/7",
   desc: "Cứu hộ tại phường Bình Phước (vùng lân cận An Lộc): kéo xe, thay lốp, câu bình. Không nhầm với tỉnh cũ. Gọi 0343 387 868.",
@@ -283,7 +318,7 @@ pages.push({
   h1: "Cứu hộ phường Bình Phước — đúng phường, không phải ‘cả tỉnh’",
   lead: "Tên phường trùng cách gọi cũ dễ gây hiểu nhầm. Trung Hiếu nhận ca tại phường Bình Phước trong danh sách lân cận An Lộc, không nhận mọi huyện đã sáp nhập.",
   jsonld: biz("Phường Bình Phước"),
-  related: `<li><a href="cuu-ho-24-7-dong-xoai.html">Cứu hộ Đồng Xoài</a></li><li><a href="../khu-vuc.html">Khu vực phục vụ</a></li>`,
+  related: `<li><a href="cuu-ho-binh-phuoc.html">Cứu hộ Bình Phước</a></li><li><a href="cuu-ho-24-7-dong-xoai.html">Cứu hộ Đồng Xoài</a></li><li><a href="../khu-vuc.html">Khu vực phục vụ</a></li>`,
   body: `
 <p>Người gõ <strong>cứu hộ Bình Phước</strong> có khi muốn cứu hộ cả vùng rộng. Trang này chỉ nói <em>phường Bình Phước</em> nằm trong vùng Trung Hiếu chạy từ An Lộc. Ngoài phường, gọi để hỏi — nếu ngoài tầm sẽ từ chối chứ không nhận rồi bỏ dở.</p>
 <h2>Làm sao biết xe có tới được</h2>

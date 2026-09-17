@@ -6,4 +6,4 @@ Disallow: /admin.js
 Disallow: /admin.css
 Disallow: /wrap-hand-seo.js
 
-Sitemap: https://cuuhotrunghieu.com/sitemap.xml
+Sitemap: https://www.cuuhotrunghieu.com/sitemap.xml
