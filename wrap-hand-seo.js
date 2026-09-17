@@ -7,7 +7,7 @@ const MAPS = "https://maps.app.goo.gl/oDM8HWbHmq7ijzN36";
 
 function absBai(file) {
   const stem = String(file).replace(/\.html$/i, "");
-  return stem === "index" ? BASE + "/bai-viet" : BASE + "/bai-viet/" + stem;
+  return BASE + "/tin-tuc/" + stem;
 }
 
 function chrome(p) {
@@ -20,10 +20,10 @@ function chrome(p) {
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Trang chủ", item: BASE + "/" },
-      { "@type": "ListItem", position: 2, name: "Cứu hộ theo khu vực", item: BASE + "/bai-viet" }
+      { "@type": "ListItem", position: 2, name: "Tin tức", item: BASE + "/tin-tuc" }
     ]
   };
-  if (url !== BASE + "/bai-viet") {
+  if (url !== BASE + "/tin-tuc") {
     crumbs.itemListElement.push({ "@type": "ListItem", position: 3, name: p.crumb, item: url });
   }
   const graph = { "@context": "https://schema.org", "@graph": [bizNode, crumbs] };
@@ -66,7 +66,7 @@ function chrome(p) {
   </header>
   <main id="noi-dung" class="page-main">
     <header class="page-hero">
-      <p class="crumb"><a href="../index.html">Trang chủ</a> / <a href="index.html">Cứu hộ khu vực</a> / ${esc(p.crumb)}</p>
+      <p class="crumb"><a href="../index.html">Trang chủ</a> / <a href="../tin-tuc.html">Tin tức</a> / ${esc(p.crumb)}</p>
       <h1>${esc(p.h1)}</h1>
       <p>${esc(p.lead)}</p>
       <div class="hero-actions">
@@ -518,47 +518,11 @@ ${faq([
 <p>Maps: <a href="https://maps.app.goo.gl/oDM8HWbHmq7ijzN36" target="_blank" rel="noopener">trụ sở</a>.</p>`
 });
 
-const dir = path.join(__dirname, "bai-viet");
+const dir = path.join(__dirname, "tin-tuc");
 fs.mkdirSync(dir, { recursive: true });
 for (const p of pages) {
   fs.writeFileSync(path.join(dir, p.file), chrome(p), "utf8");
 }
-
-const index = chrome({
-  file: "index.html",
-  title: "Cứu hộ An Lộc theo khu vực | Trung Hiếu 24/7",
-  desc: "Bài cứu hộ theo từng phường và từng việc: An Lộc, Phú Thuận, Bình Long, Chơn Thành, Minh Hưng, Đồng Xoài, phường Bình Phước. Gọi 0343 387 868.",
-  crumb: "Mục lục",
-  h1: "Cứu hộ An Lộc theo khu vực — từng phường, từng việc",
-  lead: "Mỗi link là một bài riêng: góc khác, câu hỏi khác, cùng số 0343 387 868.",
-  jsonld: biz("An Lộc"),
-  related: pages.map((p) => `<li><a href="${p.file}">${esc(p.h1)}</a></li>`).join(""),
-  body: `<p>Google không cần 100 trang gần giống nhau. Cần trang trả lời đúng ý định tìm kiếm: đang ở phường nào, đang kẹt việc gì. Các bài này viết cho An Lộc và phường lân cận — không bịa đường ngoài vùng.</p>
-<h2>Theo phường</h2>
-<ul class="kw-list">
-<li><a href="cuu-ho-an-loc.html">Cứu hộ An Lộc</a></li>
-<li><a href="cuu-ho-phu-thuan.html">Cứu hộ Khu phố Phú Thuận</a></li>
-<li><a href="cuu-ho-24-7-binh-long.html">Cứu hộ Bình Long</a></li>
-<li><a href="cuu-ho-24-7-chon-thanh.html">Cứu hộ Chơn Thành</a></li>
-<li><a href="cuu-ho-24-7-minh-hung.html">Cứu hộ Minh Hưng</a></li>
-<li><a href="cuu-ho-24-7-dong-xoai.html">Cứu hộ Đồng Xoài</a></li>
-<li><a href="cuu-ho-24-7-binh-phuoc.html">Cứu hộ phường Bình Phước</a></li>
-</ul>
-<h2>Theo việc tại An Lộc</h2>
-<ul class="kw-list">
-<li><a href="keo-xe-an-loc.html">Kéo xe</a></li>
-<li><a href="cuu-ho-xe-may-an-loc.html">Cứu hộ xe máy</a></li>
-<li><a href="cuu-ho-o-to-an-loc.html">Cứu hộ ô tô</a></li>
-<li><a href="thay-lop-tan-noi-an-loc.html">Thay lốp tận nơi</a></li>
-<li><a href="cau-binh-ac-quy-an-loc.html">Câu bình ắc quy</a></li>
-<li><a href="giao-xang-an-loc.html">Giao xăng</a></li>
-<li><a href="cuu-ho-24-7-an-loc.html">Cứu hộ 24/7</a></li>
-<li><a href="cuu-ho-dem-an-loc.html">Cứu hộ đêm</a></li>
-<li><a href="cuu-ho-xe-ngap-nuoc-an-loc.html">Xe ngập nước</a></li>
-</ul>
-<p>Gọi <a href="tel:0343387868">0343 387 868</a> khi xe đang nằm đường.</p>`
-});
-fs.writeFileSync(path.join(dir, "index.html"), index, "utf8");
 
 const today = "2026-09-17";
 function smUrl(p, pri) {
@@ -570,10 +534,9 @@ const smPaths = [
   ["/bang-gia", "0.8"],
   ["/khu-vuc", "0.9"],
   ["/hinh-anh", "0.6"],
-  ["/tin-tuc", "0.6"],
+  ["/tin-tuc", "0.85"],
   ["/lien-he", "0.8"],
-  ["/bai-viet", "0.85"],
-  ...pages.map((p) => ["/bai-viet/" + p.file.replace(/\.html$/i, ""), "0.8"])
+  ...pages.map((p) => ["/tin-tuc/" + p.file.replace(/\.html$/i, ""), "0.8"])
 ];
 const sm = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">

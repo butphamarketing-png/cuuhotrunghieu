@@ -44,7 +44,7 @@
     var nav = document.querySelector("#menu-chinh");
     if (nav) {
       var current = file === "" ? "index.html" : file;
-      var prefix = /\/bai-viet(\/|$)/i.test(location.pathname) ? "../" : "";
+      var prefix = /\/(tin-tuc|bai-viet)\/.+/i.test(location.pathname) ? "../" : "";
       nav.innerHTML = data.menu.map(function (m) {
         var href = m.href || "";
         if (!/^https?:/i.test(href) && href.indexOf("../") !== 0) href = prefix + href;

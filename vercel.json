@@ -7,6 +7,8 @@
   ],
   "redirects": [
     { "source": "/admin", "destination": "/adminbp", "permanent": false },
-    { "source": "/admin.html", "destination": "/adminbp", "permanent": false }
+    { "source": "/admin.html", "destination": "/adminbp", "permanent": false },
+    { "source": "/bai-viet", "destination": "/tin-tuc", "permanent": true },
+    { "source": "/bai-viet/:path*", "destination": "/tin-tuc/:path*", "permanent": true }
   ]
 }
