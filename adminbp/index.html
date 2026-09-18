@@ -24,9 +24,9 @@
     <div class="login-form">
       <form class="login-card" id="login-form">
         <h2>Đăng nhập AdminBP</h2>
-        <p class="hint">Lần đầu: tài khoản <b>admin</b> / mật khẩu <b>trunghieu247</b>.</p>
-        <label>Tài khoản
-          <input name="user" autocomplete="username" required />
+        <p class="hint">Tài khoản <b>admin@cuuhotrunghieu.com</b></p>
+        <label>Email
+          <input name="user" type="email" autocomplete="username" required />
         </label>
         <label>Mật khẩu
           <input name="pass" type="password" autocomplete="current-password" required />
@@ -53,7 +53,8 @@
       <div class="nav-group">
         <h3>NỘI DUNG</h3>
         <button type="button" class="nav-btn" data-view="inbox">Hộp thư liên hệ <span class="badge" id="inbox-badge" hidden>0</span></button>
-        <button type="button" class="nav-btn" data-view="posts">Tin tức</button>
+        <button type="button" class="nav-btn" data-view="posts">Tin tức trang tin</button>
+        <button type="button" class="nav-btn" data-view="seoPages">Bài SEO khu vực</button>
         <button type="button" class="nav-btn" data-view="services">Dịch vụ</button>
         <button type="button" class="nav-btn" data-view="gallery">Hình ảnh</button>
         <button type="button" class="nav-btn" data-view="pages">Trang menu</button>
@@ -78,6 +79,8 @@
         <button type="button" class="nav-btn" data-view="google">Google &amp; Maps</button>
         <button type="button" class="nav-btn" data-view="mobile">Thanh liên hệ mobile</button>
         <button type="button" class="nav-btn" data-view="seo">SEO tổng quan</button>
+        <button type="button" class="nav-btn" data-view="account">Tài khoản</button>
+        <button type="button" class="nav-btn" data-view="backup">Sao lưu</button>
       </div>
       <div class="side-foot">
         <button type="button" id="logout">Đăng xuất</button>
@@ -102,6 +105,7 @@
     </div>
   </div>
   <div class="toast" id="toast">Đã lưu</div>
-  <script src="../admin.js"></script>
+  <script src="../articles-catalog.js"></script>
+  <script src="../admin.js?v=cms3"></script>
 </body>
 </html>

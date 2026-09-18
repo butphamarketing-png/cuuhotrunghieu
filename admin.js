@@ -2,15 +2,20 @@
   var KEY = "cuuho-cms";
   var AUTH = "cuuho-admin-ok";
   var INBOX = "cuuho-inbox";
-  var PASS = "cuuho-admin-pass";
-  var DEFAULT_PASS = "trunghieu247";
+  var USER = "cuuho-admin-user-v2";
+  var PASS = "cuuho-admin-pass-v2";
+  var DEFAULT_USER = "admin@cuuhotrunghieu.com";
+  var DEFAULT_PASS = "cuuhotrunghieu.com";
   var TITLES = {
     dashboard: "Tổng quan",
     inbox: "Hộp thư liên hệ",
-    posts: "Tin tức",
+    posts: "Tin tức trang tin",
+    seoPages: "Bài SEO khu vực",
     services: "Dịch vụ",
     gallery: "Hình ảnh",
     pages: "Trang menu",
+    account: "Tài khoản",
+    backup: "Sao lưu / khôi phục",
     hero: "Slideshow / Hero",
     issues: "Sự cố",
     process: "Quy trình",
@@ -39,18 +44,31 @@
     address: "Tổ 5, Khu phố Phú Thuận, An Lộc, Đồng Nai",
     dockCall: "Gọi điện",
     dockZalo: "Zalo",
-    seoTitle: "Cứu hộ Trung Hiếu | Kéo xe – cứu hộ 24/7 Đồng Nai",
-    seoDesc: "Cứu hộ Trung Hiếu – kéo xe, cứu hộ xe máy & ô tô 24/7 tại An Lộc, Đồng Nai. Báo giá trước. Gọi 0343 387 868.",
+    seoTitle: "Cứu hộ ô tô An Lộc 24/7 | Cứu hộ xe hơi, kéo xe | Trung Hiếu",
+    seoDesc: "Cứu hộ ô tô, cứu hộ xe hơi 24/7 tại An Lộc: kéo xe hơi, nổ lốp, hết bình, chết máy. Tổ 5, Khu phố Phú Thuận. Gọi 0343 387 868, báo giá trước.",
     heroCaption: "Cứu hộ 24/7",
     heroPlace: "An Lộc · Đồng Nai",
-    introTitle: "Cứu hộ xe nhanh",
-    introLead: "Hết xăng, nổ lốp, chết máy, tai nạn nhỏ hay cần kéo xe — Trung Hiếu nhận cuộc gọi và xuất phát ngay, cả đêm lẫn ngày lễ.",
+    introTitle: "Cứu hộ ô tô, cứu hộ xe hơi 24/7",
+    introLead: "Kéo xe, nổ lốp, hết bình, hết xăng tại An Lộc, Bình Phước và phường lân cận — Trung Hiếu nhận cuộc gọi, báo giá trước, xuất phát cả đêm lẫn ngày lễ.",
+    introTagItems: [
+      { label: "Cứu hộ ô tô", href: "tin-tuc/cuu-ho-o-to-an-loc.html" },
+      { label: "Cứu hộ xe hơi", href: "tin-tuc/cuu-ho-xe-hoi.html" },
+      { label: "Kéo xe hơi", href: "tin-tuc/keo-xe-an-loc.html" },
+      { label: "Nổ lốp", href: "tin-tuc/no-lop-an-loc.html" },
+      { label: "Chết máy", href: "tin-tuc/xe-chet-may-an-loc.html" }
+    ],
     newPassword: "",
+    newUser: "",
+    articleEdits: {},
+    heroSlides: ["images/hero-slide-1.png", "images/hero-slide-2.png", "images/hero-slide-3.png"],
+    logo: "images/logo.jpg",
+    hours: "24/7",
+    tickerNote: "Hỗ trợ 24/7",
     services: [
-      { title: "Kéo xe – chở xe", desc: "Vận chuyển xe an toàn đến mọi địa điểm" },
-      { title: "Thay lốp tận nơi", desc: "Hỗ trợ thay lốp nhanh chóng, đúng kỹ thuật" },
-      { title: "Câu bình ắc quy", desc: "Khởi động xe an toàn, không lo hết bình" },
-      { title: "Giao xăng tận nơi", desc: "Giao xăng nhanh chóng mọi lúc mọi nơi" }
+      { title: "Cứu hộ ô tô – xe hơi", desc: "Kéo xe hơi, cứu hộ ô tô về nhà hoặc gara tại An Lộc", href: "tin-tuc/cuu-ho-o-to-an-loc.html" },
+      { title: "Thay lốp tận nơi", desc: "Nổ lốp, xẹp hơi — thay tại chỗ hoặc kéo về gara", href: "tin-tuc/thay-lop-tan-noi-an-loc.html" },
+      { title: "Câu bình ắc quy", desc: "Đề không nổ, đèn mờ — câu đúng cực tại An Lộc", href: "tin-tuc/cau-binh-ac-quy-an-loc.html" },
+      { title: "Giao xăng tận nơi", desc: "Giao xăng tận nơi An Lộc khi hết xăng đêm", href: "tin-tuc/giao-xang-an-loc.html" }
     ],
     process: [
       { title: "Gọi cứu hộ", desc: "Gọi hotline hoặc nhắn Zalo." },
@@ -64,7 +82,7 @@
       { q: "Có báo giá trước không?", a: "Có. Báo giá trước khi xuất phát. Không đội giá dọc đường." },
       { q: "Có làm đêm, cuối tuần, lễ Tết không?", a: "Có. Trực 24/7." },
       { q: "Kéo về nhà hoặc gara được không?", a: "Được. Kéo về nhà, gara quen, hoặc điểm bạn chỉ định." },
-      { q: "Có đặt lịch hẹn trước được không?", a: "Được. Dùng form Liên hệ hoặc nhắn Zalo. Xe đang kẹt giữa đường thì gọi ngay." }
+      { q: "Cứu hộ xe hơi có khác cứu hộ ô tô không?", a: "Không. Xe hơi và ô tô là cùng loại. Trung Hiếu nhận cứu hộ ô tô / cứu hộ xe hơi: kéo, thay lốp, câu bình, giao xăng." }
     ],
     reviews: [
       { name: "Anh Minh", text: "Xe nổ lốp trên đường, gọi Trung Hiếu có mặt nhanh, báo giá rõ." },
@@ -131,7 +149,7 @@
       { label: "Liên hệ", href: "lien-he.html" }
     ],
     pages: [
-      { file: "dich-vu.html", title: "Dịch vụ cứu hộ 24/7", desc: "Kéo xe, thay lốp, câu bình, giao xăng tận nơi tại phường An Lộc và các phường lân cận. Báo giá trước khi xuất phát.", seoTitle: "Dịch vụ cứu hộ | Cứu hộ Trung Hiếu" },
+      { file: "dich-vu.html", title: "Cứu hộ ô tô & cứu hộ xe hơi An Lộc 24/7", desc: "Kéo xe hơi, thay lốp, câu bình, giao xăng tận nơi tại phường An Lộc và các phường lân cận. Báo giá trước khi xuất phát.", seoTitle: "Cứu hộ ô tô, cứu hộ xe hơi An Lộc | Trung Hiếu" },
       { file: "bang-gia.html", title: "Báo giá trước khi xuất phát", desc: "Chi phí tùy loại xe, số km và tình trạng. Trung Hiếu nói rõ trước khi điều xe — không đội giá dọc đường.", seoTitle: "Bảng giá cứu hộ | Cứu hộ Trung Hiếu" },
       { file: "khu-vuc.html", title: "Khu vực hoạt động", desc: "Có mặt 24/7 tại phường An Lộc và các phường lân cận.", seoTitle: "Khu vực cứu hộ | Cứu hộ Trung Hiếu" },
       { file: "hinh-anh.html", title: "Hình ảnh cứu hộ thực tế", desc: "Ảnh xe và ca cứu hộ Trung Hiếu.", seoTitle: "Hình ảnh | Cứu hộ Trung Hiếu" },
@@ -142,13 +160,30 @@
 
   var data = load();
   var view = "dashboard";
+  var articleFilter = "";
+  var editingSlug = "";
+
+  function creds() {
+    return {
+      user: localStorage.getItem(USER) || DEFAULT_USER,
+      pass: localStorage.getItem(PASS) || DEFAULT_PASS
+    };
+  }
+  function catalog() {
+    return window.CUUHO_ARTICLES || [];
+  }
+  function norm(s) {
+    return String(s || "").trim().toLowerCase();
+  }
 
   function load() {
     try {
       var raw = localStorage.getItem(KEY);
       if (!raw) return JSON.parse(JSON.stringify(DEFAULT));
       var parsed = JSON.parse(raw);
-      return Object.assign(JSON.parse(JSON.stringify(DEFAULT)), parsed);
+      var merged = Object.assign(JSON.parse(JSON.stringify(DEFAULT)), parsed);
+      merged.articleEdits = Object.assign({}, parsed.articleEdits || {});
+      return merged;
     } catch (e) {
       return JSON.parse(JSON.stringify(DEFAULT));
     }
@@ -159,12 +194,20 @@
   }
 
   function save() {
-    localStorage.setItem(KEY, JSON.stringify(data));
+    var payload = JSON.parse(JSON.stringify(data));
+    delete payload.newPassword;
+    delete payload.newUser;
+    localStorage.setItem(KEY, JSON.stringify(payload));
     if (data.newPassword) {
       localStorage.setItem(PASS, data.newPassword);
       data.newPassword = "";
     }
-    toast("Đã lưu. Mở website trên máy này để xem thay đổi.");
+    if (data.newUser) {
+      localStorage.setItem(USER, String(data.newUser).trim());
+      data.newUser = "";
+    }
+    toast("Đã lưu trên trình duyệt này. Google không thấy thay đổi CMS — chỉ khách mở cùng máy.");
+    render();
   }
 
   function toast(msg) {
@@ -225,6 +268,26 @@
     var page = document.getElementById("page");
     page.innerHTML = screens[view] ? screens[view]() : "";
     bindInputs(page);
+    var q = page.querySelector("#art-q");
+    if (q) {
+      q.addEventListener("input", function () {
+        articleFilter = q.value;
+      });
+      q.addEventListener("keydown", function (e) {
+        if (e.key === "Enter") {
+          e.preventDefault();
+          render();
+        }
+      });
+      q.addEventListener("blur", function () { render(); });
+    }
+    page.querySelectorAll("[data-art]").forEach(function (el) {
+      el.addEventListener("input", function () {
+        if (!editingSlug) return;
+        if (!data.articleEdits[editingSlug]) data.articleEdits[editingSlug] = {};
+        data.articleEdits[editingSlug][el.getAttribute("data-art")] = el.value;
+      });
+    });
     page.querySelectorAll("[data-act]").forEach(function (btn) {
       btn.addEventListener("click", function () {
         actions[btn.getAttribute("data-act")](btn);
@@ -236,10 +299,10 @@
     dashboard: function () {
       var leads = inbox();
       return (
-        '<h1 class="page-title">Tổng quan</h1><p class="lead">Giống CMS Sao Khuê: xem nhanh vận hành rồi sửa từng khối website.</p>' +
+        '<h1 class="page-title">Tổng quan</h1><p class="lead">AdminBP quản lý toàn bộ website (khung CMS Sao Khuê). Nội dung lưu trên trình duyệt này rồi hiện lại trên site cùng máy.</p>' +
         '<div class="stats">' +
           card(data.phoneDisplay, "Hotline đang hiện") +
-          card(String(data.posts.length), "Bài tin tức") +
+          card(String(catalog().length), "Trang SEO /tin-tuc") +
           card(String(leads.length), "Lịch hẹn / hộp thư") +
           card(String(data.services.length), "Dịch vụ") +
         "</div>" +
@@ -275,11 +338,42 @@
         '<button class="btn btn-ghost" type="button" data-act="addPost">Thêm bài viết</button>'
       );
     },
+    seoPages: function () {
+      var q = articleFilter.toLowerCase();
+      var list = catalog().filter(function (a) {
+        return !q || (a.slug + " " + a.title + " " + a.h1).toLowerCase().indexOf(q) >= 0;
+      });
+      var editor = "";
+      if (editingSlug) {
+        var base = catalog().filter(function (a) { return a.slug === editingSlug; })[0] || { title: "", desc: "", h1: "" };
+        var ed = Object.assign({}, base, data.articleEdits[editingSlug] || {});
+        editor =
+          '<div class="panel"><h2>Sửa /tin-tuc/' + escapeHtml(editingSlug) + "</h2>" +
+          '<div class="field"><label>Title SEO<input data-art="title" value="' + escapeAttr(ed.title) + '" /></label></div>' +
+          '<div class="field"><label>Meta description<textarea rows="3" data-art="desc">' + escapeHtml(ed.desc === "Undefined" ? "" : ed.desc) + "</textarea></label></div>" +
+          '<div class="field"><label>H1<input data-art="h1" value="' + escapeAttr(ed.h1) + '" /></label></div>' +
+          '<p class="note">Bấm Lưu thay đổi, rồi mở bài trên cùng trình duyệt. File HTML trên server không đổi.</p></div>';
+      }
+      return (
+        '<h1 class="page-title">Bài SEO khu vực</h1><p class="lead">' + catalog().length + " trang trong /tin-tuc/. Tìm và sửa title, mô tả, H1.</p>" +
+        '<div class="field"><label>Tìm bài<input id="art-q" value="' + escapeAttr(articleFilter) + '" placeholder="kéo xe an lộc…" /></label></div>' +
+        editor +
+        '<div class="panel">' +
+        list.slice(0, 60).map(function (a) {
+          return '<p><button class="btn btn-ghost" type="button" data-act="openArt" data-slug="' + escapeAttr(a.slug) + '">' + escapeHtml(a.title.split("|")[0]) + "</button></p>";
+        }).join("") +
+        (list.length > 60 ? '<p class="note">Còn ' + (list.length - 60) + " bài — gõ thêm từ khóa.</p>" : "") +
+        "</div>"
+      );
+    },
     services: function () {
       return '<h1 class="page-title">Dịch vụ</h1>' + data.services.map(function (s, i) {
         return '<div class="panel"><div class="row"><div class="field"><label>Tên<input data-list="services" data-i="' + i + '" data-k="title" value="' + escapeAttr(s.title) + '" /></label></div>' +
-          '<div class="field"><label>Mô tả<input data-list="services" data-i="' + i + '" data-k="desc" value="' + escapeAttr(s.desc) + '" /></label></div></div></div>';
-      }).join("");
+          '<div class="field"><label>Link<input data-list="services" data-i="' + i + '" data-k="href" value="' + escapeAttr(s.href || "") + '" /></label></div></div>' +
+          '<div class="field"><label>Mô tả<input data-list="services" data-i="' + i + '" data-k="desc" value="' + escapeAttr(s.desc) + '" /></label></div>' +
+          '<button class="btn btn-danger" type="button" data-act="delService" data-i="' + i + '">Xóa</button></div>';
+      }).join("") +
+        '<button class="btn btn-ghost" type="button" data-act="addService">Thêm dịch vụ</button>';
     },
     gallery: function () {
       return '<h1 class="page-title">Hình ảnh</h1><p class="lead">Đường dẫn file trong thư mục images/.</p>' +
@@ -292,8 +386,10 @@
         field("Nhãn vàng", "heroCaption") + field("Dòng địa điểm", "heroPlace") +
         field("Tiêu đề H1", "introTitle") +
         '<div class="field"><label>Đoạn mô tả<textarea data-key="introLead" rows="4">' + escapeHtml(data.introLead) + "</textarea></label></div>" +
-        field("Nhãn sự cố (cách nhau bởi dấu phẩy)", "introTags") +
-        field("Dòng 1 logo", "brandLine1") + field("Dòng 2 logo", "brandLine2") + "</div>";
+        field("Dòng 1 logo", "brandLine1") + field("Dòng 2 logo", "brandLine2") +
+        (data.heroSlides || []).map(function (g, i) {
+          return '<div class="field"><label>Slide ' + (i + 1) + '<input data-list="heroSlides" data-i="' + i + '" value="' + escapeAttr(g) + '" /></label></div>';
+        }).join("") + "</div>";
     },
     process: function () {
       return '<h1 class="page-title">Quy trình 4 bước</h1>' + data.process.map(function (s, i) {
@@ -375,8 +471,9 @@
         field("Link Zalo", "zalo") +
         field("Facebook", "facebook") +
         field("Địa chỉ", "address") +
-        field("Đổi mật khẩu admin", "newPassword", "password") +
-        '<p class="note">Mật khẩu lưu trên trình duyệt. Đường dẫn quản trị: /adminbp</p></div>';
+        field("Logo (đường dẫn)", "logo") +
+        field("Giờ hoạt động", "hours") +
+        '<p class="note">Đổi tài khoản / mật khẩu ở mục Tài khoản. Đường dẫn: /adminbp</p></div>';
     },
     google: function () {
       return '<h1 class="page-title">Google &amp; Maps</h1><div class="panel">' +
@@ -393,6 +490,20 @@
       return '<h1 class="page-title">SEO tổng quan</h1><div class="panel">' +
         field("Meta title trang chủ", "seoTitle") +
         '<div class="field"><label>Meta description<textarea data-key="seoDesc" rows="3">' + escapeHtml(data.seoDesc) + "</textarea></label></div></div>";
+    },
+    account: function () {
+      return '<h1 class="page-title">Tài khoản AdminBP</h1><div class="panel">' +
+        '<p class="note">Đang đăng nhập: <b>' + escapeHtml(creds().user) + "</b></p>" +
+        field("Email / tài khoản mới", "newUser") +
+        field("Mật khẩu mới", "newPassword", "password") +
+        '<p class="note">Để trống nếu không đổi. Lưu trên trình duyệt này. Đường dẫn: /adminbp</p></div>';
+    },
+    backup: function () {
+      return '<h1 class="page-title">Sao lưu / khôi phục</h1><div class="panel">' +
+        '<p class="lead">Xuất JSON để chuyển máy, hoặc dán file cũ rồi khôi phục.</p>' +
+        '<div class="field"><label>Dữ liệu CMS<textarea id="backup-json" rows="10">' + escapeHtml(JSON.stringify(data, null, 2)) + "</textarea></label></div>" +
+        '<button class="btn btn-save" type="button" data-act="doBackup">Tải file JSON</button> ' +
+        '<button class="btn btn-ghost" type="button" data-act="doRestore">Khôi phục từ ô trên</button></div>';
     }
   };
 
@@ -408,6 +519,36 @@
     delPost: function (btn) {
       data.posts.splice(Number(btn.getAttribute("data-i")), 1);
       render();
+    },
+    addService: function () {
+      data.services.push({ title: "Dịch vụ mới", desc: "", href: "dich-vu.html" });
+      render();
+    },
+    delService: function (btn) {
+      data.services.splice(Number(btn.getAttribute("data-i")), 1);
+      render();
+    },
+    openArt: function (btn) {
+      editingSlug = btn.getAttribute("data-slug") || "";
+      render();
+    },
+    doBackup: function () {
+      var blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
+      var a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = "cuuho-cms-backup.json";
+      a.click();
+    },
+    doRestore: function () {
+      var ta = document.getElementById("backup-json");
+      try {
+        var parsed = JSON.parse(ta.value);
+        data = Object.assign(JSON.parse(JSON.stringify(DEFAULT)), parsed);
+        data.articleEdits = Object.assign({}, parsed.articleEdits || {});
+        save();
+      } catch (err) {
+        toast("JSON không hợp lệ.");
+      }
     }
   };
 
@@ -432,9 +573,9 @@
     var fd = new FormData(e.target);
     var user = String(fd.get("user") || "");
     var pass = String(fd.get("pass") || "");
-    var stored = localStorage.getItem(PASS) || DEFAULT_PASS;
     var err = document.getElementById("login-err");
-    if (user === "admin" && pass === stored) {
+    var c = creds();
+    if (norm(user) === norm(c.user) && pass === c.pass) {
       sessionStorage.setItem(AUTH, "1");
       showApp();
     } else {
@@ -445,6 +586,10 @@
   function showApp() {
     document.getElementById("login").hidden = true;
     document.getElementById("app").hidden = false;
+    var chip = document.querySelector(".userchip b");
+    if (chip) chip.textContent = creds().user;
+    var small = document.querySelector(".userchip small");
+    if (small) small.textContent = "Quản trị viên";
     render();
   }
 

@@ -68,6 +68,41 @@
     if (ph && page.title) ph.textContent = page.title;
     if (pp && page.desc) pp.textContent = page.desc;
     if (page.seoTitle) document.title = page.seoTitle;
+    if (page.seoDesc) {
+      var pmeta = document.querySelector('meta[name="description"]');
+      if (pmeta) pmeta.setAttribute("content", page.seoDesc);
+    }
+  }
+
+  var slug = file.replace(/\.html$/i, "");
+  if (/\/tin-tuc\//i.test(location.pathname) && data.articleEdits && data.articleEdits[slug]) {
+    var art = data.articleEdits[slug];
+    if (art.title) document.title = art.title;
+    if (art.desc) {
+      var am = document.querySelector('meta[name="description"]');
+      if (am) am.setAttribute("content", art.desc);
+    }
+    var ah = document.querySelector(".page-hero h1");
+    if (ah && art.h1) ah.textContent = art.h1;
+  }
+
+  if (data.heroSlides) {
+    document.querySelectorAll(".slides img").forEach(function (img, i) {
+      if (data.heroSlides[i]) img.src = data.heroSlides[i];
+    });
+  }
+  if (data.logo) {
+    document.querySelectorAll("img.logo, img.foot-logo").forEach(function (img) {
+      img.src = (/\/tin-tuc\//i.test(location.pathname) && data.logo.indexOf("images/") === 0)
+        ? "../" + data.logo
+        : data.logo;
+    });
+  }
+  if (data.gallery) {
+    var gals = document.querySelectorAll(".photos img, .gallery img");
+    gals.forEach(function (img, i) {
+      if (data.gallery[i]) img.src = data.gallery[i];
+    });
   }
 
   var cap = document.querySelector(".hero-caption");
@@ -78,13 +113,15 @@
   if (h1 && data.introTitle) h1.textContent = data.introTitle;
   var lead = document.querySelector(".intro .lead");
   if (lead && data.introLead) lead.textContent = data.introLead;
-  if (data.introTags) {
-    var tags = document.querySelector(".intro-tags");
-    if (tags) {
-      tags.innerHTML = data.introTags.split(",").map(function (t) {
-        return "<li>" + esc(t.trim()) + "</li>";
-      }).join("");
-    }
+  var tags = document.querySelector(".intro-tags");
+  if (tags && data.introTagItems && data.introTagItems.length) {
+    tags.innerHTML = data.introTagItems.map(function (t) {
+      return "<li><a href=\"" + esc(t.href) + "\">" + esc(t.label) + "</a></li>";
+    }).join("");
+  } else if (data.introTags && tags) {
+    tags.innerHTML = data.introTags.split(",").map(function (t) {
+      return "<li>" + esc(t.trim()) + "</li>";
+    }).join("");
   }
 
   var ih = document.querySelector(".issues-wrap .head h2");
@@ -111,6 +148,7 @@
       var p = card.querySelector("p");
       if (t) t.textContent = s.title;
       if (p) p.textContent = s.desc;
+      if (s.href) card.setAttribute("href", s.href);
     });
   }
 

@@ -9,6 +9,8 @@ Disallow: /generate-100-seo.js
 Disallow: /patch-hub.js
 Disallow: /cap-meta.js
 Disallow: /seo-polish.js
+Disallow: /dump-articles.js
+Disallow: /bump-cms.js
 Disallow: /prompt-chatgpt-giao-dien.txt
 
 Sitemap: https://www.cuuhotrunghieu.com/sitemap.xml
