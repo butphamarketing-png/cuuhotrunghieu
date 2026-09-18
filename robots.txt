@@ -5,5 +5,10 @@ Disallow: /admin.html
 Disallow: /admin.js
 Disallow: /admin.css
 Disallow: /wrap-hand-seo.js
+Disallow: /generate-100-seo.js
+Disallow: /patch-hub.js
+Disallow: /cap-meta.js
+Disallow: /seo-polish.js
+Disallow: /prompt-chatgpt-giao-dien.txt
 
 Sitemap: https://www.cuuhotrunghieu.com/sitemap.xml

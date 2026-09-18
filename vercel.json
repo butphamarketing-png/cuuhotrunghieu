@@ -9,6 +9,35 @@
     { "source": "/admin", "destination": "/adminbp", "permanent": false },
     { "source": "/admin.html", "destination": "/adminbp", "permanent": false },
     { "source": "/bai-viet", "destination": "/tin-tuc", "permanent": true },
-    { "source": "/bai-viet/:path*", "destination": "/tin-tuc/:path*", "permanent": true }
+    { "source": "/bai-viet/:path*", "destination": "/tin-tuc/:path*", "permanent": true },
+    { "source": "/index", "destination": "/", "permanent": true },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "cuuhotrunghieu.com" }],
+      "destination": "https://www.cuuhotrunghieu.com/:path*",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/adminbp",
+      "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }]
+    },
+    {
+      "source": "/adminbp/(.*)",
+      "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" }
+      ]
+    },
+    {
+      "source": "/images/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+    }
   ]
 }
