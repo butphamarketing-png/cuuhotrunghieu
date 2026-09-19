@@ -388,6 +388,32 @@ const intents = [
   }
 ];
 
+function writePages(pages) {
+  const dir = path.join(__dirname, "tin-tuc");
+  fs.mkdirSync(dir, { recursive: true });
+  for (const p of pages) {
+    fs.writeFileSync(path.join(dir, p.file), chrome(p), "utf8");
+  }
+  const smPath = path.join(__dirname, "sitemap.xml");
+  let sm = fs.readFileSync(smPath, "utf8");
+  const today = "2026-09-20";
+  for (const p of pages) {
+    const loc = `${BASE}/tin-tuc/${p.file.replace(/\.html$/i, "")}`;
+    if (sm.includes(loc)) continue;
+    sm = sm.replace(
+      "</urlset>",
+      `  <url><loc>${loc}</loc><lastmod>${today}</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>\n</urlset>`
+    );
+  }
+  fs.writeFileSync(smPath, sm, "utf8");
+  return pages;
+}
+
+module.exports = { chrome, esc, faq, writePages, BASE, MAPS, TEL };
+
+if (require.main !== module) {
+  // imported by generate-cuu-ho-fill.js
+} else {
 const dir = path.join(__dirname, "tin-tuc");
 const keepHandwritten = new Set(["bao-gia-cuu-ho-an-loc.html", "goi-cuu-ho-an-loc.html"]);
 
@@ -467,3 +493,4 @@ ${items}
 fs.writeFileSync(hubPath, hub, "utf8");
 
 console.log("wrote", pages.length, "pages");
+}
