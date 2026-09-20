@@ -18,4 +18,11 @@ Disallow: /cms.js
 Disallow: /bump-cms.js
 Disallow: /prompt-chatgpt-giao-dien.txt
 
+User-agent: Googlebot
+Allow: /
+Disallow: /adminbp
+Disallow: /admin.html
+Disallow: /cms.js
+Disallow: /articles-catalog.js
+
 Sitemap: https://www.cuuhotrunghieu.com/sitemap.xml
