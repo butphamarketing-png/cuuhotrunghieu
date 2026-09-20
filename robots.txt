@@ -13,6 +13,8 @@ Disallow: /patch-hub.js
 Disallow: /cap-meta.js
 Disallow: /seo-polish.js
 Disallow: /dump-articles.js
+Disallow: /articles-catalog.js
+Disallow: /cms.js
 Disallow: /bump-cms.js
 Disallow: /prompt-chatgpt-giao-dien.txt
 
