@@ -8,6 +8,7 @@ Disallow: /wrap-hand-seo.js
 Disallow: /generate-100-seo.js
 Disallow: /generate-100-car.js
 Disallow: /generate-cuu-ho-fill.js
+Disallow: /generate-binh-long.js
 Disallow: /patch-hub.js
 Disallow: /cap-meta.js
 Disallow: /seo-polish.js
