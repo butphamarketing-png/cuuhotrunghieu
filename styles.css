@@ -984,9 +984,9 @@ h1 span { color: var(--blue); }
 }
 .area-inner {
   display: grid;
-  grid-template-columns: minmax(240px, 300px) minmax(280px, 1fr) minmax(240px, 280px);
-  gap: 8px 24px;
-  align-items: center;
+  grid-template-columns: minmax(200px, 1fr) minmax(280px, 1.2fr) minmax(200px, 1fr);
+  gap: 8px 20px;
+  align-items: start;
   background:
     radial-gradient(900px 280px at 70% 10%, #e7f3ff 0%, transparent 58%),
     linear-gradient(180deg, #f3f8ff, #fff);
@@ -1012,7 +1012,12 @@ h1 span { color: var(--blue); }
   background: var(--blue);
   vertical-align: middle;
 }
-.area-copy .sub { margin: 0 0 14px; color: var(--muted); font-size: 14px; }
+.area-head { grid-column: 1 / -1; }
+.area-head .area-kicker { margin-bottom: 6px; }
+.area-col-l { grid-column: 1; }
+.area-col-r { grid-column: 3; }
+.area-head .sub, .area-note { margin: 0 0 8px; color: var(--muted); font-size: 14px; }
+.area-note { max-width: 800px; margin: 12px auto 0; text-align: center; }
 .area-copy ul { list-style: none; padding: 0; margin: 0 0 12px; }
 .area-copy li { margin: 0; }
 .area-copy li a {
@@ -1071,6 +1076,7 @@ h1 span { color: var(--blue); }
   text-decoration: none;
   font-weight: 700;
 }
+.area-inner .dn-map { grid-column: 2; }
 .area-side { min-width: 0; }
 .area-benefits { list-style: none; padding: 0; margin: 0 0 16px; }
 .area-benefits li {
@@ -1586,8 +1592,8 @@ h1 span { color: var(--blue); }
 .dock .zalo { background: var(--zalo); }
 
 @media (max-width: 1200px) {
-  .area-inner { grid-template-columns: 1fr 1fr; }
-  .dn-map { grid-column: 1 / -1; max-width: 420px; }
+  .area-inner { grid-template-columns: 1fr minmax(240px, 1fr) 1fr; }
+  .dn-map { grid-column: 2; max-width: none; }
   .road { grid-template-columns: repeat(4, 1fr); }
   .road-line { right: 0; width: 100%; }
   .road-truck { grid-column: 1 / -1; max-width: 280px; margin-left: auto; }
@@ -1613,8 +1619,15 @@ h1 span { color: var(--blue); }
     font-size: 16px;
   }
 }
+@media (max-width: 980px) {
+  .area-inner { grid-template-columns: 1fr 1fr; }
+  .area-col-l { grid-column: 1; }
+  .area-col-r { grid-column: 2; }
+  .area-inner .dn-map { grid-column: 1 / -1; grid-row: 3; max-width: 420px; }
+}
 @media (max-width: 860px) {
   .trio, .bottom, .steps ol, .why-grid, .rev-grid, .area-inner, .price-strip, .faq-grid, .contact-grid, .svc-detail { grid-template-columns: 1fr; }
+  .area-col-l, .area-col-r, .area-inner .dn-map { grid-column: auto; grid-row: auto; }
   .road { grid-template-columns: 1fr; }
   .rev-bar { flex-direction: column; align-items: center; gap: 10px; }
   .issues { grid-template-columns: repeat(2, 1fr); gap: 10px; }
