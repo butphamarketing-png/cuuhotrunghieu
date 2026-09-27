@@ -38,7 +38,6 @@
     phone: "0343387868",
     phoneDisplay: "0343 387 868",
     zalo: "https://zalo.me/0343387868",
-    facebook: "https://www.facebook.com/",
     maps: "https://maps.app.goo.gl/oDM8HWbHmq7ijzN36",
     mapsEmbed: "https://www.google.com/maps?q=11.6390278,106.6087778&hl=vi&z=17&output=embed",
     address: "Tổ 5, Khu phố Phú Thuận, An Lộc, Đồng Nai",
@@ -307,7 +306,7 @@
           card(String(data.services.length), "Dịch vụ") +
         "</div>" +
         '<div class="grid2">' +
-          '<div class="panel"><h2>Việc nên làm</h2><ul><li>Kiểm tra số điện thoại và Zalo</li><li>Dán link Maps / Facebook thật</li><li>Duyệt hộp thư đặt lịch</li><li>Thêm tin tức khi có ca cứu hộ mới</li></ul></div>' +
+          '<div class="panel"><h2>Việc nên làm</h2><ul><li>Kiểm tra số điện thoại và Zalo</li><li>Dán link Maps</li><li>Duyệt hộp thư đặt lịch</li><li>Thêm tin tức khi có ca cứu hộ mới</li></ul></div>' +
           '<div class="panel"><h2>Lịch hẹn mới</h2>' + (leads.slice(0, 4).map(function (l) {
             return "<p><b>" + escapeHtml(l.name) + "</b> · " + escapeHtml(l.phone) + "<br /><span class='note'>" + escapeHtml(l.note || "") + "</span></p>";
           }).join("") || "<p class='note'>Chưa có lịch từ form website.</p>") + "</div>" +
@@ -469,7 +468,6 @@
         field("Số điện thoại (10 số)", "phone", "tel") +
         field("Hiển thị số", "phoneDisplay") +
         field("Link Zalo", "zalo") +
-        field("Facebook", "facebook") +
         field("Địa chỉ", "address") +
         field("Logo (đường dẫn)", "logo") +
         field("Giờ hoạt động", "hours") +

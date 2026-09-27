@@ -30,6 +30,15 @@ function chrome(p) {
   return `<!DOCTYPE html>
 <html lang="vi">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2MK81HNFV4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-2MK81HNFV4');
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>${esc(p.title)}</title>
@@ -372,7 +381,7 @@ pages.push({
 <h2>Khi nào câu bình, khi nào kéo</h2>
 <p>Đèn còn sáng, đề kêu ụt: hay là bình. Im thin thít sau ngập: đừng đề, kéo. Trung Hiếu không câu bừa cho có tiếng nổ rồi hỏng máy.</p>
 <h2>Giá xe máy</h2>
-<p>Thấp hơn ô tô, vẫn nói trước. Không có ‘giá mạng’ trên Facebook ẩn phí. Số trên site: 0343 387 868.</p>
+<p>Thấp hơn ô tô, vẫn nói trước. Không có giá mạng ẩn phí. Số trên site: 0343 387 868.</p>
 ${faq([
   ["Có vá lốp không?", "Thay/vá tùy tình trạng và mặt bằng. Không được thì kéo."],
   ["Xe không giấy tờ?", "Nói thật khi gọi. Không khuyến khích xe không rõ nguồn gốc."]

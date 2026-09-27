@@ -8,7 +8,6 @@
   var display = data.phoneDisplay || phone;
   var zalo = data.zalo || (phone ? "https://zalo.me/" + phone : "");
   var maps = data.maps || "";
-  var fb = data.facebook || "";
   var address = data.address || "";
   var file = (location.pathname.replace(/\/+$/, "").split("/").pop() || "index.html").toLowerCase();
   if (!file || file === "adminbp") file = "index.html";
@@ -26,7 +25,6 @@
       if (a.getAttribute("href")) a.href = maps;
     });
   }
-  if (fb) document.querySelectorAll('a[href*="facebook.com"]').forEach(function (a) { a.href = fb; });
   if (data.mapsEmbed) {
     document.querySelectorAll(".dn-map iframe, iframe[title*='Maps'], iframe[title*='maps'], iframe[title*='Google']").forEach(function (f) {
       f.src = data.mapsEmbed;

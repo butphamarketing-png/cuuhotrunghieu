@@ -55,6 +55,15 @@ function chrome(p) {
   return `<!DOCTYPE html>
 <html lang="vi">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2MK81HNFV4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-2MK81HNFV4');
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>${esc(p.title)}</title>
@@ -404,7 +413,7 @@ ${faq([["Có tổng đài 1900 không?", "Không. Gọi thẳng 0343 387 868."],
     body: `<p><strong>Cứu hộ Trung Hiếu</strong> là dịch vụ cứu hộ đường của Nguyễn Trung Hiếu, đóng Tổ 5, Khu phố Phú Thuận, An Lộc, Đồng Nai. Không phải mạng lưới nhiều tỉnh.</p>
 <h2>Làm gì</h2><p>Kéo xe máy và ô tô, thay lốp tận nơi, câu bình, giao xăng. Báo giá trước.</p>
 <h2>Phục vụ đâu</h2><p>An Lộc, Phú Thuận, Bình Long, Chơn Thành, Minh Hưng, Đồng Xoài, phường Bình Phước. <a href="../khu-vuc.html">Xem khu vực</a>.</p>
-${faq([["Chủ là ai?", "Nguyễn Trung Hiếu. Gọi 0343 387 868."], ["Có Facebook?", "Footer generic cho tới khi có fanpage thật."]])}
+${faq([["Chủ là ai?", "Nguyễn Trung Hiếu. Gọi 0343 387 868."], ["Liên hệ bằng gì?", "Gọi 0343 387 868 hoặc nhắn Zalo cùng số."]])}
 <p><a href="${MAPS}" target="_blank" rel="noopener">Google Maps</a>.</p>`,
     related: `<li><a href="cuu-ho-an-loc.html">Cứu hộ An Lộc</a></li><li><a href="cuu-ho-binh-phuoc.html">Cứu hộ Bình Phước</a></li>`
   },

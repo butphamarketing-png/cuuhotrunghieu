@@ -79,11 +79,6 @@ function polishHead(html, rel) {
   }
 
   html = html.replace(
-    /href="https:\/\/www\.facebook\.com\/" target="_blank" rel="noopener"/g,
-    'href="https://www.facebook.com/" target="_blank" rel="nofollow noopener"'
-  );
-
-  html = html.replace(
     /(<p class="crumb">[\s\S]*?\/ )([^<]+)<\/p>/,
     (_, a, b) => a + cap(b.trim()) + "</p>"
   );
