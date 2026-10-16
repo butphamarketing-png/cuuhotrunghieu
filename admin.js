@@ -59,7 +59,7 @@
     newPassword: "",
     newUser: "",
     articleEdits: {},
-    heroSlides: ["images/hero-slide-1.png", "images/hero-slide-2.png", "images/hero-slide-3.png"],
+    heroSlides: ["images/thuc-te/job-15.jpg", "images/thuc-te/job-03.jpg", "images/thuc-te/job-01.jpg"],
     logo: "images/logo.jpg",
     hours: "24/7",
     tickerNote: "Hỗ trợ 24/7",
@@ -95,13 +95,12 @@
       { id: "goi-cuu-ho", date: "2026-08-28", title: "Khi nào nên gọi cứu hộ thay vì tự xử lý?", body: "Gọi khi xe nằm giữa đường, cao tốc, trời tối, mưa, hoặc không chắc kỹ thuật." }
     ],
     gallery: [
-      "images/hero-slide-1.png",
-      "images/hero-slide-2.png",
-      "images/hero-slide-3.png",
-      "images/svc-keo.png",
-      "images/svc-lop.png",
-      "images/svc-binh.png",
-      "images/svc-xang.png"
+      "images/thuc-te/job-15.jpg",
+      "images/thuc-te/job-03.jpg",
+      "images/thuc-te/job-01.jpg",
+      "images/thuc-te/job-12.jpg",
+      "images/thuc-te/job-05.jpg",
+      "images/thuc-te/job-08.jpg"
     ],
     brandLine1: "TRUNG HIẾU",
     brandLine2: "CỨU HỘ 24/7",
