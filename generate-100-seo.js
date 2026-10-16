@@ -129,7 +129,7 @@ const areas = [
 const intents = [
   {
     id: "keo", slug: (a) => `keo-xe-${a.id}.html`, kw: (a) => `kéo xe ${a.name}`,
-    title: (a) => `Kéo xe ${a.name} 24/7 | Xe máy & ô tô | Trung Hiếu`,
+    title: (a) => `Kéo xe ${a.name} 24/7 | Cứu Hộ Trung Hiếu`,
     h1: (a, v) => [`Kéo xe ${a.name}: chốt điểm đón rồi mới ra xe`, `Kéo xe ${a.name} — xe không tự đi thì kéo, đừng đẩy ẩu`, `Kéo xe ${a.name} từ An Lộc, báo km trước`][v],
     lead: (a) => `Kéo xe ${a.name} xuất phát An Lộc. ${a.near}. Gọi ${TEL}.`,
     h2: ["Khi nào nên kéo", "Xe máy khác ô tô", "Giá kéo"],
@@ -145,7 +145,7 @@ const intents = [
   },
   {
     id: "xemay", slug: (a) => `cuu-ho-xe-may-${a.id}.html`, kw: (a) => `cứu hộ xe máy ${a.name}`,
-    title: (a) => `Cứu hộ xe máy ${a.name} | Chết máy, nổ lốp, hết xăng | Trung Hiếu`,
+    title: (a) => `Cứu hộ xe máy ${a.name} | Cứu Hộ Trung Hiếu`,
     h1: (a, v) => [`Cứu hộ xe máy ${a.name} — ca nhỏ cũng không đứng giữa đường`, `Xe máy ${a.name} nằm đường: tấp lề rồi gọi`, `Cứu hộ xe máy ${a.name} 24/7 từ An Lộc`][v],
     lead: (a) => `Cứu hộ xe máy ${a.name}: hết bình, nổ lốp, hết xăng, kéo về nhà. ${a.near}`,
     h2: ["Ca xe máy hay gặp", "Đứng chỗ nào cho an toàn", "Khi phải kéo"],
@@ -161,7 +161,7 @@ const intents = [
   },
   {
     id: "oto", slug: (a) => `cuu-ho-o-to-${a.id}.html`, kw: (a) => `cứu hộ ô tô ${a.name}`,
-    title: (a) => `Cứu hộ ô tô ${a.name} | Kéo xe, lốp, ắc quy | Trung Hiếu`,
+    title: (a) => `Cứu hộ ô tô ${a.name} | Cứu Hộ Trung Hiếu`,
     h1: (a, v) => [`Cứu hộ ô tô ${a.name}: không cào gầm, không kéo ẩu`, `Ô tô ${a.name} nằm đường — ưu tiên lề rồi mới xử lý`, `Cứu hộ ô tô ${a.name} 24/7, báo giá trước`][v],
     lead: (a) => `Cứu hộ ô tô ${a.name}: kéo an toàn, thay lốp, câu bình. ${a.near}`,
     h2: ["Thông tin ô tô cần nói", "Không tự kích trên dốc", "Sau khi xe tới"],
@@ -177,7 +177,7 @@ const intents = [
   },
   {
     id: "lop", slug: (a) => `thay-lop-${a.id}.html`, kw: (a) => `thay lốp tận nơi ${a.name}`,
-    title: (a) => `Thay lốp tận nơi ${a.name} | Xe máy & ô tô | Trung Hiếu`,
+    title: (a) => `Thay lốp tận nơi ${a.name} | Cứu Hộ Trung Hiếu`,
     h1: (a, v) => [`Thay lốp ${a.name}: chỗ đứng an toàn còn hơn thay cho xong`, `Nổ lốp ${a.name} — tấp lề, đừng vá giữa làn`, `Thay lốp tận nơi ${a.name} 24/7`][v],
     lead: (a) => `Thay lốp ${a.name} khi nổ lốp, xẹp hơi. Không thay được thì kéo. ${TEL}.`,
     h2: ["Bạn chuẩn bị", "Khi phải kéo thay vì thay", "Chi phí"],
@@ -193,7 +193,7 @@ const intents = [
   },
   {
     id: "binh", slug: (a) => `cau-binh-${a.id}.html`, kw: (a) => `câu bình ắc quy ${a.name}`,
-    title: (a) => `Câu bình ắc quy ${a.name} | Đề không nổ | Trung Hiếu`,
+    title: (a) => `Câu bình ắc quy ${a.name} | Cứu Hộ Trung Hiếu`,
     h1: (a, v) => [`Câu bình ${a.name}: hết điện thì câu, hỏng bình thì nói thật`, `Ắc quy ${a.name} yếu — đừng đề 20 lần`, `Câu bình tận nơi ${a.name} 24/7`][v],
     lead: (a) => `Câu bình ${a.name} khi đề không nổ, đèn mờ. Bình chết thì kéo. Gọi ${TEL}.`,
     h2: ["Dấu hiệu hết điện", "Đừng làm trước khi đội tới", "Khi phải kéo"],
@@ -209,7 +209,7 @@ const intents = [
   },
   {
     id: "xang", slug: (a) => `giao-xang-${a.id}.html`, kw: (a) => `giao xăng tận nơi ${a.name}`,
-    title: (a) => `Giao xăng ${a.name} | Hết xăng đêm | Trung Hiếu`,
+    title: (a) => `Giao xăng ${a.name} | Cứu Hộ Trung Hiếu`,
     h1: (a, v) => [`Giao xăng ${a.name}: nói xăng hay dầu trước khi đổ`, `Hết xăng ${a.name} — gọi, đừng đổ nhờ loại không rõ`, `Giao xăng tận nơi ${a.name} 24/7`][v],
     lead: (a) => `Giao xăng ${a.name}. Nói đúng xăng hoặc dầu. ${a.near}`,
     h2: ["Nói loại nhiên liệu", "Sau khi đổ", "Giá"],
@@ -225,7 +225,7 @@ const intents = [
   },
   {
     id: "dem", slug: (a) => `cuu-ho-dem-${a.id}.html`, kw: (a) => `cứu hộ đêm ${a.name}`,
-    title: (a) => `Cứu hộ đêm ${a.name} | Sau 22h | Trung Hiếu ${TEL}`,
+    title: (a) => `Cứu hộ đêm ${a.name} | Cứu Hộ Trung Hiếu`,
     h1: (a, v) => [`Cứu hộ đêm ${a.name}: ánh sáng và lề quan trọng hơn ‘sửa cho nhanh’`, `Xe nằm đường đêm ${a.name} — gọi ${TEL}`, `Cứu hộ đêm ${a.name} 24/7 từ An Lộc`][v],
     lead: (a) => `Cứu hộ đêm ${a.name}: kéo xe, hết bình, hết xăng. Đèn cảnh báo, đứng lề.`,
     h2: ["Trước khi xe tới", "Ca đêm hay gặp", "Phụ thu"],
@@ -241,7 +241,7 @@ const intents = [
   },
   {
     id: "ngap", slug: (a) => `xe-ngap-${a.id}.html`, kw: (a) => `cứu hộ xe ngập nước ${a.name}`,
-    title: (a) => `Xe ngập nước ${a.name} | Tắt máy, kéo xe | Trung Hiếu`,
+    title: (a) => `Xe ngập nước ${a.name} | Cứu Hộ Trung Hiếu`,
     h1: (a, v) => [`Xe ngập ${a.name}: tắt máy ngay, đừng đề thử`, `Cứu hộ xe ngập ${a.name} — ưu tiên kéo, không thủy kích thêm`, `Xe chết vì ngập ${a.name}: gọi kéo`][v],
     lead: (a) => `Xe ngập ${a.name}: tắt máy, không đề lại, gọi kéo. Tránh thủy kích. ${TEL}.`,
     h2: ["Việc làm ngay", "Vì sao không đề lại", "Kéo về đâu"],
@@ -257,7 +257,7 @@ const intents = [
   },
   {
     id: "chet", slug: (a) => `xe-chet-may-${a.id}.html`, kw: (a) => `xe chết máy ${a.name}`,
-    title: (a) => `Xe chết máy ${a.name} | Cứu hộ tận nơi | Trung Hiếu`,
+    title: (a) => `Xe chết máy ${a.name} | Cứu Hộ Trung Hiếu`,
     h1: (a, v) => [`Xe chết máy ${a.name}: mô tả tiếng đề, đừng đoán bệnh trên lề`, `Chết máy ${a.name} — hết bình, hết xăng hay phải kéo?`, `Cứu hộ xe chết máy ${a.name} 24/7`][v],
     lead: (a) => `Xe chết máy ${a.name}: câu bình, giao xăng hoặc kéo. Gọi ${TEL}, nói triệu chứng.`,
     h2: ["Phân loại nhanh", "Thông tin khi gọi", "Không tự tháo"],
@@ -273,7 +273,7 @@ const intents = [
   },
   {
     id: "hetxang", slug: (a) => `het-xang-${a.id}.html`, kw: (a) => `hết xăng ${a.name}`,
-    title: (a) => `Hết xăng ${a.name} | Giao xăng tận nơi 24/7 | Trung Hiếu`,
+    title: (a) => `Hết xăng ${a.name} | Cứu Hộ Trung Hiếu`,
     h1: (a, v) => [`Hết xăng ${a.name}: gọi giao, đừng đẩy xe hàng cây số`, `Xe hết xăng ${a.name} đêm — nói đúng loại nhiên liệu`, `Hết xăng ${a.name}, cứu hộ Trung Hiếu giao tận nơi`][v],
     lead: (a) => `Hết xăng ${a.name}. Giao xăng/dầu tận nơi. ${a.near}`,
     h2: ["Gọi thế nào", "Xe đẩy được thì đẩy", "Nhầm nhiên liệu"],
@@ -289,7 +289,7 @@ const intents = [
   },
   {
     id: "hetbinh", slug: (a) => `het-binh-${a.id}.html`, kw: (a) => `hết bình ${a.name}`,
-    title: (a) => `Hết bình ${a.name} | Câu ắc quy tận nơi | Trung Hiếu`,
+    title: (a) => `Hết bình ${a.name} | Cứu Hộ Trung Hiếu`,
     h1: (a, v) => [`Hết bình ${a.name}: tắt đèn, gọi câu, đừng đề thêm`, `Xe hết điện ${a.name} — câu bình hoặc kéo`, `Hết bình ${a.name} 24/7, Trung Hiếu An Lộc`][v],
     lead: (a) => `Hết bình ${a.name}: câu ắc quy tại chỗ nếu còn cứu. Gọi ${TEL}.`,
     h2: ["Nhận biết", "Chờ cứu hộ", "Bình đã chết"],
@@ -305,7 +305,7 @@ const intents = [
   },
   {
     id: "nolop", slug: (a) => `no-lop-${a.id}.html`, kw: (a) => `nổ lốp ${a.name}`,
-    title: (a) => `Nổ lốp ${a.name} | Thay lốp tận nơi | Trung Hiếu`,
+    title: (a) => `Nổ lốp ${a.name} | Cứu Hộ Trung Hiếu`,
     h1: (a, v) => [`Nổ lốp ${a.name}: giữ lái, tấp lề, đừng phanh gấp`, `Lốp nổ ${a.name} — gọi thay hoặc kéo`, `Xử lý nổ lốp ${a.name} rồi gọi ${TEL}`][v],
     lead: (a) => `Nổ lốp ${a.name}: tấp lề, đèn cảnh báo, gọi thay lốp hoặc kéo.`,
     h2: ["Trên đường", "Gọi cứu hộ", "Ô tô thiếu lốp bước"],
@@ -321,7 +321,7 @@ const intents = [
   },
   {
     id: "tannoi", slug: (a) => `cuu-ho-tan-noi-${a.id}.html`, kw: (a) => `cứu hộ tận nơi ${a.name}`,
-    title: (a) => `Cứu hộ tận nơi ${a.name} 24/7 | Trung Hiếu An Lộc`,
+    title: (a) => `Cứu hộ tận nơi ${a.name} 24/7 | Cứu Hộ Trung Hiếu`,
     h1: (a, v) => [`Cứu hộ tận nơi ${a.name}: gửi vị trí, không hẹn ‘ghé lúc nào rảnh’`, `Tận nơi ${a.name} nghĩa là xe tới chỗ bạn đứng`, `Cứu hộ tận nơi ${a.name} — kéo, lốp, bình, xăng`][v],
     lead: (a) => `Cứu hộ tận nơi ${a.name}: Trung Hiếu tới chỗ xe nằm. ${a.near}`,
     h2: ["Tận nơi gồm gì", "Bạn cần gửi gì", "Ngoài vùng"],
@@ -337,7 +337,7 @@ const intents = [
   },
   {
     id: "venha", slug: (a) => `keo-xe-ve-nha-${a.id}.html`, kw: (a) => `kéo xe về nhà ${a.name}`,
-    title: (a) => `Kéo xe về nhà ${a.name} | Trung Hiếu 24/7`,
+    title: (a) => `Kéo xe về nhà ${a.name} | Cứu Hộ Trung Hiếu`,
     h1: (a, v) => [`Kéo xe về nhà ${a.name}: nói địa chỉ trả trước khi xe lăn`, `Về nhà ${a.name} hay về gara — chốt một điểm`, `Kéo xe về nhà ${a.name} từ chỗ nằm đường`][v],
     lead: (a) => `Kéo xe về nhà ${a.name}. Chốt điểm trả, báo giá km. Gọi ${TEL}.`,
     h2: ["Chốt địa chỉ", "Hẻm nhà", "Không đổi điểm lặng lẽ"],
@@ -353,7 +353,7 @@ const intents = [
   },
   {
     id: "mua", slug: (a) => `cuu-ho-mua-${a.id}.html`, kw: (a) => `cứu hộ trời mưa ${a.name}`,
-    title: (a) => `Cứu hộ trời mưa ${a.name} | Ngập, chết máy | Trung Hiếu`,
+    title: (a) => `Cứu hộ trời mưa ${a.name} | Cứu Hộ Trung Hiếu`,
     h1: (a, v) => [`Cứu hộ mưa ${a.name}: giảm tốc, đừng lội vũng không rõ đáy`, `Mưa lớn ${a.name} — xe chết thì tắt máy, gọi kéo`, `Cứu hộ khi mưa ${a.name} 24/7`][v],
     lead: (a) => `Cứu hộ mưa ${a.name}: ngập, hết bình, nổ lốp trơn. Gọi ${TEL}.`,
     h2: ["Lái khi mưa", "Xe đã chết", "Phụ thu mưa"],
@@ -390,7 +390,7 @@ const extras = [
   {
     file: "goi-cuu-ho-an-loc.html",
     area: "An Lộc",
-    title: `Gọi cứu hộ An Lộc | Số ${TEL} | Trung Hiếu`,
+    title: `Gọi cứu hộ An Lộc | Cứu Hộ Trung Hiếu`,
     h1: "Gọi cứu hộ An Lộc: bốn ý đủ, không cần kể tiểu sử xe",
     crumb: "Gọi cứu hộ An Lộc",
     kw: "gọi cứu hộ An Lộc",
@@ -405,7 +405,7 @@ ${faq([["Có tổng đài 1900 không?", "Không. Gọi thẳng 0343 387 868."],
   {
     file: "cuu-ho-trung-hieu.html",
     area: "An Lộc",
-    title: `Cứu hộ Trung Hiếu | An Lộc 24/7 | ${TEL}`,
+    title: `Cứu hộ An Lộc 24/7 | Cứu Hộ Trung Hiếu`,
     h1: "Cứu hộ Trung Hiếu: đội xe tại An Lộc, không chi nhánh ảo",
     crumb: "Cứu hộ Trung Hiếu",
     kw: "cứu hộ Trung Hiếu",
@@ -420,7 +420,7 @@ ${faq([["Chủ là ai?", "Nguyễn Trung Hiếu. Gọi 0343 387 868."], ["Liên 
   {
     file: "bao-gia-cuu-ho-an-loc.html",
     area: "An Lộc",
-    title: "Báo giá cứu hộ An Lộc | Nói giá trước khi xuất phát | Trung Hiếu",
+    title: "Báo giá cứu hộ An Lộc | Cứu Hộ Trung Hiếu",
     h1: "Báo giá cứu hộ An Lộc: không niêm một số cho mọi ca, nhưng nói trước khi đi",
     crumb: "Báo giá cứu hộ An Lộc",
     kw: "báo giá cứu hộ An Lộc",

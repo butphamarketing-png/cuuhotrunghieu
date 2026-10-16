@@ -6,7 +6,7 @@ const pages = [
   {
     file: "cuu-ho-binh-long.html",
     area: "Bình Long",
-    title: "Cứu hộ Bình Long | Kéo xe, ô tô, xe hơi 24/7 | Trung Hiếu",
+    title: "Cứu hộ Bình Long | Cứu Hộ Trung Hiếu",
     h1: "Cứu hộ Bình Long: URL đúng từ khóa, xe vẫn đi từ An Lộc",
     crumb: "Cứu hộ Bình Long",
     desc: "Cứu hộ Bình Long 24/7: kéo xe máy, ô tô, xe hơi, lốp, bình. Xuất phát Tổ 5 Phú Thuận, An Lộc. Gọi 0343 387 868, báo giá trước.",
@@ -28,7 +28,7 @@ ${faq([
   {
     file: "cuu-ho-chon-thanh.html",
     area: "Chơn Thành",
-    title: "Cứu hộ Chơn Thành | Kéo xe, ô tô 24/7 | Trung Hiếu",
+    title: "Cứu hộ Chơn Thành | Cứu Hộ Trung Hiếu",
     h1: "Cứu hộ Chơn Thành: chốt điểm trả rồi mới ra xe kéo",
     crumb: "Cứu hộ Chơn Thành",
     desc: "Cứu hộ Chơn Thành 24/7 từ An Lộc: kéo xe, ô tô, xe hơi, lốp, bình. Gọi 0343 387 868, báo km trước khi đi.",
@@ -50,7 +50,7 @@ ${faq([
   {
     file: "cuu-ho-minh-hung.html",
     area: "Minh Hưng",
-    title: "Cứu hộ Minh Hưng | Cổng khu, xe máy, ô tô | Trung Hiếu",
+    title: "Cứu hộ Minh Hưng | Cứu Hộ Trung Hiếu",
     h1: "Cứu hộ Minh Hưng: gửi số cổng, đừng chỉ gửi tên phường",
     crumb: "Cứu hộ Minh Hưng",
     desc: "Cứu hộ Minh Hưng 24/7: cổng khu công nghiệp, kéo xe máy và ô tô từ An Lộc. Gọi 0343 387 868, báo giá trước.",
@@ -72,7 +72,7 @@ ${faq([
   {
     file: "cuu-ho-dong-xoai.html",
     area: "Đồng Xoài",
-    title: "Cứu hộ Đồng Xoài | Kéo xe từ An Lộc, báo giờ | Trung Hiếu",
+    title: "Cứu hộ Đồng Xoài | Cứu Hộ Trung Hiếu",
     h1: "Cứu hộ Đồng Xoài: hỏi giờ và giá ngay cuộc gọi đầu",
     crumb: "Cứu hộ Đồng Xoài",
     desc: "Cứu hộ Đồng Xoài 24/7: không có đội sẵn tại chỗ, xe đi từ An Lộc. Kéo xe, ô tô, lốp, bình. Gọi 0343 387 868.",
@@ -94,7 +94,7 @@ ${faq([
   {
     file: "cuu-ho-24-7-phu-thuan.html",
     area: "Khu phố Phú Thuận",
-    title: "Cứu hộ 24/7 Phú Thuận | Ngõ hẹp, An Lộc | Trung Hiếu",
+    title: "Cứu hộ 24/7 Phú Thuận | Cứu Hộ Trung Hiếu",
     h1: "Cứu hộ 24/7 Phú Thuận: ca gần trụ sở, vẫn báo giá trước",
     crumb: "Cứu hộ 24/7 Phú Thuận",
     desc: "Cứu hộ 24/7 Khu phố Phú Thuận, An Lộc: ngõ hẹp, xe máy và ô tô. Tổ 5 ngay khu phố. Gọi 0343 387 868.",
