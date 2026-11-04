@@ -11,6 +11,7 @@
   --bad: #e11d3a;
 }
 * { box-sizing: border-box; }
+[hidden] { display: none !important; }
 html, body { height: 100%; margin: 0; }
 body {
   font-family: "Be Vietnam Pro", system-ui, sans-serif;
@@ -168,7 +169,14 @@ a { color: inherit; }
 }
 .crumb { font-size: 14px; }
 .crumb b { font-weight: 800; }
-.top-actions { display: flex; gap: 10px; align-items: center; }
+.top-actions { display: flex; gap: 10px; align-items: center; min-width: 0; flex-shrink: 0; }
+.top-actions .userchip b {
+  display: block;
+  max-width: 140px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 .btn {
   display: inline-flex;
   align-items: center;
